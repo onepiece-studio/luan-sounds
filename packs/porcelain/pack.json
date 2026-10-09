@@ -1,7 +1,12 @@
 {
-  "name": "瓷响",
-  "englishName": "Porcelain",
-  "description": "清透柔和的瓷质共鸣与轻敲。",
-  "version": 1,
+  "name": "Porcelain",
+  "description": "Clear, soft porcelain resonance and light taps.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "瓷响",
+      "description": "清透柔和的瓷质共鸣与轻敲。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

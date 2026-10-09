@@ -1,7 +1,12 @@
 {
-  "name": "微风",
-  "englishName": "Breeze",
-  "description": "圆润气流与轻哨管的起落。",
-  "version": 1,
+  "name": "Breeze",
+  "description": "Rounded airflow and soft whistle tones that rise and fall.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "微风",
+      "description": "圆润气流与轻哨管的起落。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

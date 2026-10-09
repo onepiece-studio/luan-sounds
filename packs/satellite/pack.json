@@ -1,7 +1,12 @@
 {
-  "name": "卫星",
-  "englishName": "Satellite",
-  "description": "有距离感的空灵点声，留下轻轻的回响。",
-  "version": 1,
+  "name": "Satellite",
+  "description": "Distant, airy blips that leave a soft echo.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "卫星",
+      "description": "有距离感的空灵点声，留下轻轻的回响。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

@@ -16,6 +16,7 @@
     },
     "name": { "$ref": "#/$defs/name" },
     "description": { "$ref": "#/$defs/description" },
+    "localizations": { "$ref": "#/$defs/localizations" },
     "author": { "$ref": "#/$defs/author" },
     "homepage": { "$ref": "#/$defs/httpsUrl" },
     "packs": {
@@ -33,6 +34,20 @@
       "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*$"
     },
     "description": { "type": "string", "maxLength": 280 },
+    "localizations": {
+      "description": "Display text per BCP 47 language tag (case-insensitive). Luan uses the best match for the user's preferred languages and falls back to the main fields.",
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[A-Za-z]{2,3}(-[A-Za-z]{4})?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "name": { "$ref": "#/$defs/name" },
+          "description": { "$ref": "#/$defs/description" }
+        }
+      }
+    },
     "httpsUrl": { "type": "string", "pattern": "^https://[^\\s/?#@]+([/?#]\\S*)?$" },
     "author": {
       "type": "object",
@@ -55,6 +70,7 @@
         },
         "name": { "$ref": "#/$defs/name" },
         "description": { "$ref": "#/$defs/description" },
+        "localizations": { "$ref": "#/$defs/localizations" },
         "version": { "type": "integer", "minimum": 1 },
         "license": {
           "type": "string",

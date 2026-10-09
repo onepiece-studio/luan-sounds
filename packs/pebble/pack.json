@@ -1,7 +1,12 @@
 {
-  "name": "卵石",
-  "englishName": "Pebble",
-  "description": "短促干燥的石击与轻回弹。",
-  "version": 1,
+  "name": "Pebble",
+  "description": "Short, dry stone clicks with a light bounce.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "卵石",
+      "description": "短促干燥的石击与轻回弹。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

@@ -1,7 +1,12 @@
 {
-  "name": "木琴",
-  "englishName": "Marimba",
-  "description": "温暖谐波木条与柔槌滚奏。",
-  "version": 1,
+  "name": "Marimba",
+  "description": "Warm, harmonic wooden bars and soft mallet rolls.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "木琴",
+      "description": "温暖谐波木条与柔槌滚奏。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

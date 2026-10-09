@@ -1,7 +1,12 @@
 {
-  "name": "晶光",
-  "englishName": "Crystal",
-  "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。",
-  "version": 1,
+  "name": "Crystal",
+  "description": "Light, bright glass pulses with subtle beating and clean, clear tails.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "晶光",
+      "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

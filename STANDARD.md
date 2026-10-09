@@ -1,7 +1,5 @@
 # Luan Sound Repository Standard v1
 
-[中文](STANDARD.zh.md)
-
 A Luan sound repository is a set of static files on the web: one manifest, `luan.json`, plus WAV files. Anyone can publish one. Luan Pro users add it by pasting the URL of its `luan.json`, then pick a pack from it. In the Luan app these repositories are called **sound sources**.
 
 This document is for repository authors. It defines the manifest, the audio rules and the hosting rules. `tools/luan_repo.py` (Python 3 standard library only) builds the manifest and enforces every rule below.
@@ -32,7 +30,7 @@ The repository itself has no version number. Changing its name or description ne
 
 - You write the top-level fields of `luan.json` by hand. `python3 tools/luan_repo.py build .` generates its `packs` array from `packs/*/pack.json` and the WAV files, including every `sha256` and `size`. Never write hashes by hand.
 - Only `luan.json` and the audio files are part of the standard. `pack.json` and the `packs/` layout are a convention of the tool: Luan never reads `pack.json`; it fetches exactly the `file` paths listed in `luan.json`.
-- `pack.json` holds every pack field except `id` (the folder name) and `sounds` (generated), for example `{ "name": "Night rain", "version": 1, "license": "CC-BY-4.0" }`.
+- `pack.json` holds every pack field except `id` (the folder name) and `sounds` (generated), for example `{ "name": "Night rain", "version": 1, "license": "CC-BY-4.0" }`. Fields such as `localizations` are copied into `luan.json` as written.
 
 ## 3. The manifest: `luan.json`
 
@@ -42,6 +40,9 @@ The repository itself has no version number. Changing its name or description ne
   "id": "com.example.sounds",
   "name": "Example sounds",
   "description": "Soft sounds for coding sessions",
+  "localizations": {
+    "zh-Hans": { "name": "示例音效", "description": "写代码时用的轻柔音效" }
+  },
   "author": { "name": "Example", "email": "hi@example.com", "url": "https://example.com" },
   "homepage": "https://github.com/example/luan-sounds",
   "packs": [
@@ -49,6 +50,10 @@ The repository itself has no version number. Changing its name or description ne
       "id": "night-rain",
       "name": "Night rain",
       "description": "Raindrops on a window sill",
+      "localizations": {
+        "zh-Hans": { "name": "夜雨", "description": "雨滴落在窗沿上的轻响" },
+        "ja": { "name": "夜の雨" }
+      },
       "version": 3,
       "license": "CC-BY-4.0",
       "author": { "name": "Someone" },
@@ -67,12 +72,14 @@ The repository itself has no version number. Changing its name or description ne
 | `id` | yes | 1–128 characters, `^[a-z0-9]+([.-][a-z0-9]+)*$`; reverse-DNS recommended. `builtin` is reserved. Must never change for the same URL |
 | `name` | yes | 1–64 characters, no control characters |
 | `description` | no | ≤ 280 characters |
+| `localizations` | no | Translated `name` / `description`, see [Localization](#localization) |
 | `author` | no | `{ "name" (required), "email"?, "url"? }`; `url` must be `https://` |
 | `homepage` | no | `https://` URL |
 | `packs` | yes | 1–64 packs with unique `id`s |
 | `packs[].id` | yes | 1–64 characters, `^[a-z0-9]+(-[a-z0-9]+)*$` |
 | `packs[].name` | yes | 1–64 characters, no control characters |
 | `packs[].description` | no | ≤ 280 characters |
+| `packs[].localizations` | no | Same as the top-level `localizations` |
 | `packs[].version` | yes | Integer ≥ 1 |
 | `packs[].license` | no | SPDX identifier (e.g. `CC-BY-4.0`) or `LicenseRef-…` |
 | `packs[].author` | no | Same shape as the top-level `author`; defaults to the repository author |
@@ -82,6 +89,23 @@ The repository itself has no version number. Changing its name or description ne
 | `sounds.<event>.size` | yes | File size in bytes, integer |
 
 Lengths count Unicode code points. Integers must be JSON integers (`1`, not `1.0` or `"1"`).
+
+### Localization
+
+Write `name` and `description` in the language most of your users read; English is a good default. Add translations in `localizations`, keyed by BCP 47 language tag:
+
+```json
+"localizations": {
+  "zh-Hans": { "name": "夜雨", "description": "雨滴落在窗沿上的轻响" },
+  "ja": { "name": "夜の雨" }
+}
+```
+
+- Keys are language tags of the form language[-Script][-REGION][-variant], such as `ja`, `zh-Hans`, `pt-BR`. Tags are case-insensitive; the same tag must not appear twice.
+- Each value may contain `name` and/or `description`, with the same rules as the main fields. Anything left out falls back to the main field.
+- Luan goes through the user's preferred languages in order and tries each from the full tag down (`zh-Hans-CN`, then `zh-Hans`, then `zh`), separately for `name` and `description`. When nothing matches it uses the main field.
+- Luan skips an invalid entry (bad tag, over-long text) instead of rejecting the repository. `luan_repo.py check` reports it as an error so you can fix it.
+- `localizations` is allowed on the repository and on each pack. It is an optional addition to v1 and does not change `schemaVersion`; older versions of Luan ignore it.
 
 ### Events
 

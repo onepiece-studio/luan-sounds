@@ -1,8 +1,14 @@
 {
   "schemaVersion": 1,
   "id": "app.fuyo.luan.official",
-  "name": "Luan 官方音效",
-  "description": "Luan 官方出品的程序合成音效包，可在 Luan 中直接试听和选用。Official sound packs for Luan.",
+  "name": "Luan Official Sounds",
+  "description": "Procedurally synthesized sound packs made for Luan, ready to preview and use in the app.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "Luan 官方音效",
+      "description": "Luan 官方出品的程序合成音效包，可在 Luan 中直接试听和选用。"
+    }
+  },
   "author": {
     "name": "fuyo",
     "email": "luan@fuyo.app",
@@ -12,10 +18,15 @@
   "packs": [
     {
       "id": "analog",
-      "name": "模拟",
-      "englishName": "Analog",
-      "description": "温暖厚实的合成器短句，带细微的自然起伏。",
-      "version": 1,
+      "name": "Analog",
+      "description": "Warm, full synth phrases with subtle natural movement.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "模拟",
+          "description": "温暖厚实的合成器短句，带细微的自然起伏。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -67,10 +78,15 @@
     },
     {
       "id": "blackbird",
-      "name": "乌鸫·笛语",
-      "englishName": "Blackbird flute",
-      "description": "原创合成仿鸟鸣：流动的笛质滑音与不规则短句，取乌鸫式歌声意象。",
-      "version": 1,
+      "name": "Blackbird flute",
+      "description": "Original synthesized birdsong: flowing, flute-like glides and irregular phrases evoking a blackbird.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "乌鸫·笛语",
+          "description": "原创合成仿鸟鸣：流动的笛质滑音与不规则短句，取乌鸫式歌声意象。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -122,10 +138,15 @@
     },
     {
       "id": "breath",
-      "name": "微风",
-      "englishName": "Breeze",
-      "description": "圆润气流与轻哨管的起落。",
-      "version": 1,
+      "name": "Breeze",
+      "description": "Rounded airflow and soft whistle tones that rise and fall.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "微风",
+          "description": "圆润气流与轻哨管的起落。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -177,10 +198,15 @@
     },
     {
       "id": "clockwork",
-      "name": "钟表",
-      "englishName": "Clockwork",
-      "description": "克制的擒纵滴答、上弦与弹簧轻响。",
-      "version": 1,
+      "name": "Clockwork",
+      "description": "Restrained escapement ticks, winding and light spring sounds.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "钟表",
+          "description": "克制的擒纵滴答、上弦与弹簧轻响。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -232,10 +258,15 @@
     },
     {
       "id": "console",
-      "name": "掌机",
-      "englishName": "Console",
-      "description": "干净短促的复古按键，轻巧而有明确节奏。",
-      "version": 1,
+      "name": "Console",
+      "description": "Clean, short retro button presses, light with a clear rhythm.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "掌机",
+          "description": "干净短促的复古按键，轻巧而有明确节奏。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -287,10 +318,15 @@
     },
     {
       "id": "copper",
-      "name": "铜铃",
-      "englishName": "Copper",
-      "description": "有厚度的小铜铃，金属泛音迅速收束。",
-      "version": 1,
+      "name": "Copper",
+      "description": "Small copper bells with body; metallic overtones that fade quickly.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "铜铃",
+          "description": "有厚度的小铜铃，金属泛音迅速收束。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -342,10 +378,15 @@
     },
     {
       "id": "crystal",
-      "name": "晶光",
-      "englishName": "Crystal",
-      "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。",
-      "version": 1,
+      "name": "Crystal",
+      "description": "Light, bright glass pulses with subtle beating and clean, clear tails.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "晶光",
+          "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -397,10 +438,15 @@
     },
     {
       "id": "cuckoo-clear",
-      "name": "布谷·清鸣",
-      "englishName": "Clear cuckoo",
-      "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。",
-      "version": 1,
+      "name": "Clear cuckoo",
+      "description": "Original synthesized birdsong: a close, round two-note falling cuckoo call with light breath and a soft throat.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "布谷·清鸣",
+          "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -452,10 +498,15 @@
     },
     {
       "id": "cuckoo-grove",
-      "name": "布谷·林间",
-      "englishName": "Grove cuckoo",
-      "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。",
-      "version": 1,
+      "name": "Grove cuckoo",
+      "description": "Original synthesized birdsong: a tighter two-note cuckoo call with richer throat overtones and short woodland reflections.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "布谷·林间",
+          "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -507,10 +558,15 @@
     },
     {
       "id": "cuckoo-mist",
-      "name": "布谷·晨雾",
-      "englishName": "Misty cuckoo",
-      "description": "原创合成仿鸟鸣：较低、较缓的布谷双呼，柔化高频与短余韵营造晨雾距离感。",
-      "version": 1,
+      "name": "Misty cuckoo",
+      "description": "Original synthesized birdsong: a lower, slower two-note cuckoo call; softened highs and a short tail give a sense of distance in morning mist.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "布谷·晨雾",
+          "description": "原创合成仿鸟鸣：较低、较缓的布谷双呼，柔化高频与短余韵营造晨雾距离感。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -562,10 +618,15 @@
     },
     {
       "id": "dove",
-      "name": "斑鸠·低吟",
-      "englishName": "Gentle dove",
-      "description": "原创合成仿鸟鸣：低柔的 coo 声腔、缓起音与轻喉颤，适合安静工作提示。",
-      "version": 1,
+      "name": "Gentle dove",
+      "description": "Original synthesized birdsong: a low, soft coo with a gentle attack and light throat trill, suited to quiet work.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "斑鸠·低吟",
+          "description": "原创合成仿鸟鸣：低柔的 coo 声腔、缓起音与轻喉颤，适合安静工作提示。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -617,10 +678,15 @@
     },
     {
       "id": "feather",
-      "name": "鸾羽",
-      "englishName": "Feather",
-      "description": "温润的合成鸟鸣、轻气息与中频共鸣；用滑音方向和短句节奏区分事件。",
-      "version": 1,
+      "name": "Feather",
+      "description": "Warm synthesized birdsong with light breath and midrange resonance; glide direction and phrase rhythm tell events apart.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "鸾羽",
+          "description": "温润的合成鸟鸣、轻气息与中频共鸣；用滑音方向和短句节奏区分事件。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -672,10 +738,15 @@
     },
     {
       "id": "felt",
-      "name": "毡音",
-      "englishName": "Felt",
-      "description": "柔软毡槌的温暖圆音，缓起而不拖沓。",
-      "version": 1,
+      "name": "Felt",
+      "description": "Warm, round tones from soft felt mallets that start gently without dragging.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "毡音",
+          "description": "柔软毡槌的温暖圆音，缓起而不拖沓。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -727,10 +798,15 @@
     },
     {
       "id": "fmkeys",
-      "name": "数码琴",
-      "englishName": "FM Keys",
-      "description": "带一点玻璃质感的电子琴键，清亮收束。",
-      "version": 1,
+      "name": "FM Keys",
+      "description": "Electric piano keys with a touch of glassiness and a bright, clean finish.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "数码琴",
+          "description": "带一点玻璃质感的电子琴键，清亮收束。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -782,10 +858,15 @@
     },
     {
       "id": "kalimba",
-      "name": "拇指琴",
-      "englishName": "Kalimba",
-      "description": "短拨片和温暖簧片，保留轻微木腔感。",
-      "version": 1,
+      "name": "Kalimba",
+      "description": "Short plucks and warm tines with a hint of wooden body.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "拇指琴",
+          "description": "短拨片和温暖簧片，保留轻微木腔感。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -837,10 +918,15 @@
     },
     {
       "id": "marimba",
-      "name": "木琴",
-      "englishName": "Marimba",
-      "description": "温暖谐波木条与柔槌滚奏。",
-      "version": 1,
+      "name": "Marimba",
+      "description": "Warm, harmonic wooden bars and soft mallet rolls.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "木琴",
+          "description": "温暖谐波木条与柔槌滚奏。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -892,10 +978,15 @@
     },
     {
       "id": "neon",
-      "name": "霓虹",
-      "englishName": "Neon",
-      "description": "明快利落的电子拨音，带一点跳跃的光泽。",
-      "version": 1,
+      "name": "Neon",
+      "description": "Crisp, lively electronic plucks with a bouncy sheen.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "霓虹",
+          "description": "明快利落的电子拨音，带一点跳跃的光泽。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -947,10 +1038,15 @@
     },
     {
       "id": "orbit",
-      "name": "星环",
-      "englishName": "Orbit",
-      "description": "圆润电子脉冲与短暂空间共鸣。",
-      "version": 1,
+      "name": "Orbit",
+      "description": "Rounded electronic pulses with brief spatial resonance.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "星环",
+          "description": "圆润电子脉冲与短暂空间共鸣。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1002,10 +1098,15 @@
     },
     {
       "id": "paper",
-      "name": "纸间",
-      "englishName": "Paper",
-      "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。",
-      "version": 1,
+      "name": "Paper",
+      "description": "Grains like folding paper and turning pages, with a little low end under short rustles.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "纸间",
+          "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1057,10 +1158,15 @@
     },
     {
       "id": "pebble",
-      "name": "卵石",
-      "englishName": "Pebble",
-      "description": "短促干燥的石击与轻回弹。",
-      "version": 1,
+      "name": "Pebble",
+      "description": "Short, dry stone clicks with a light bounce.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "卵石",
+          "description": "短促干燥的石击与轻回弹。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1112,10 +1218,15 @@
     },
     {
       "id": "plucked",
-      "name": "弦语",
-      "englishName": "Plucked",
-      "description": "细密拨弦泛音与指腹止音。",
-      "version": 1,
+      "name": "Plucked",
+      "description": "Fine plucked-string overtones muted by a fingertip.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "弦语",
+          "description": "细密拨弦泛音与指腹止音。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1167,10 +1278,15 @@
     },
     {
       "id": "porcelain",
-      "name": "瓷响",
-      "englishName": "Porcelain",
-      "description": "清透柔和的瓷质共鸣与轻敲。",
-      "version": 1,
+      "name": "Porcelain",
+      "description": "Clear, soft porcelain resonance and light taps.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "瓷响",
+          "description": "清透柔和的瓷质共鸣与轻敲。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1222,10 +1338,15 @@
     },
     {
       "id": "raindrop",
-      "name": "雨滴",
-      "englishName": "Raindrop",
-      "description": "圆润水珠落下，带短暂滑音与细小水纹。",
-      "version": 1,
+      "name": "Raindrop",
+      "description": "Round falling water drops with brief glides and tiny ripples.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "雨滴",
+          "description": "圆润水珠落下，带短暂滑音与细小水纹。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1277,10 +1398,15 @@
     },
     {
       "id": "satellite",
-      "name": "卫星",
-      "englishName": "Satellite",
-      "description": "有距离感的空灵点声，留下轻轻的回响。",
-      "version": 1,
+      "name": "Satellite",
+      "description": "Distant, airy blips that leave a soft echo.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "卫星",
+          "description": "有距离感的空灵点声，留下轻轻的回响。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1332,10 +1458,15 @@
     },
     {
       "id": "telemetry",
-      "name": "遥测",
-      "englishName": "Telemetry",
-      "description": "疏落的电子点声，像安静仪表上的小小回应。",
-      "version": 1,
+      "name": "Telemetry",
+      "description": "Sparse electronic blips, like small replies from a quiet instrument panel.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "遥测",
+          "description": "疏落的电子点声，像安静仪表上的小小回应。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1387,10 +1518,15 @@
     },
     {
       "id": "velvet",
-      "name": "丝绒",
-      "englishName": "Velvet",
-      "description": "柔软圆润的短和声，适合不想被打断的时候。",
-      "version": 1,
+      "name": "Velvet",
+      "description": "Soft, round short chords for when you would rather not be interrupted.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "丝绒",
+          "description": "柔软圆润的短和声，适合不想被打断的时候。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1442,10 +1578,15 @@
     },
     {
       "id": "warbler",
-      "name": "柳莺·轻啭",
-      "englishName": "Willow warbler",
-      "description": "原创合成仿鸟鸣：短而柔的曲线轻啭，用克制的颤动表达柳莺意象。",
-      "version": 1,
+      "name": "Willow warbler",
+      "description": "Original synthesized birdsong: short, soft, curving trills with restrained vibrato evoking a willow warbler.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "柳莺·轻啭",
+          "description": "原创合成仿鸟鸣：短而柔的曲线轻啭，用克制的颤动表达柳莺意象。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1497,10 +1638,15 @@
     },
     {
       "id": "waterphone",
-      "name": "水镜",
-      "englishName": "Water Mirror",
-      "description": "柔和非谐波共鸣，像水面缓慢展开。",
-      "version": 1,
+      "name": "Water Mirror",
+      "description": "Soft inharmonic resonance, like a water surface slowly spreading.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "水镜",
+          "description": "柔和非谐波共鸣，像水面缓慢展开。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1552,10 +1698,15 @@
     },
     {
       "id": "wood",
-      "name": "木语",
-      "englishName": "Wood",
-      "description": "干燥温暖的木质拨奏与短敲。",
-      "version": 1,
+      "name": "Wood",
+      "description": "Dry, warm wooden plucks and short knocks.",
+      "localizations": {
+        "zh-Hans": {
+          "name": "木语",
+          "description": "干燥温暖的木质拨奏与短敲。"
+        }
+      },
+      "version": 2,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {

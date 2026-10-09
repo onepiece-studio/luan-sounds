@@ -1,7 +1,12 @@
 {
-  "name": "掌机",
-  "englishName": "Console",
-  "description": "干净短促的复古按键，轻巧而有明确节奏。",
-  "version": 1,
+  "name": "Console",
+  "description": "Clean, short retro button presses, light with a clear rhythm.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "掌机",
+      "description": "干净短促的复古按键，轻巧而有明确节奏。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

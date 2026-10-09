@@ -38,9 +38,12 @@ PACK_ID = re.compile(r'[a-z0-9]+(-[a-z0-9]+)*')
 LICENSE = re.compile(r'LicenseRef-[A-Za-z0-9.-]+|(?!LicenseRef-)[A-Za-z0-9][A-Za-z0-9.+-]*')
 SHA256 = re.compile(r'[0-9a-f]{64}')
 PATH_CHARS = re.compile(r'[A-Za-z0-9._/-]+')
+# BCP 47 language[-script][-region][-variant...]; extensions and private use are not needed for display text.
+LANGUAGE_TAG = re.compile(r'[A-Za-z]{2,3}(-[A-Za-z]{4})?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*')
 
-TOP_FIELDS = {'schemaVersion', 'id', 'name', 'description', 'author', 'homepage', 'packs'}
-PACK_FIELDS = {'id', 'name', 'description', 'version', 'license', 'author', 'sounds'}
+TOP_FIELDS = {'schemaVersion', 'id', 'name', 'description', 'localizations', 'author', 'homepage', 'packs'}
+PACK_FIELDS = {'id', 'name', 'description', 'localizations', 'version', 'license', 'author', 'sounds'}
+LOCALIZATION_FIELDS = {'name', 'description'}
 AUTHOR_FIELDS = {'name', 'email', 'url'}
 SOUND_FIELDS = {'file', 'sha256', 'size'}
 PCM_GUID_TAIL = bytes.fromhex('000000001000800000aa00389b71')
@@ -308,6 +311,39 @@ def check_text(value, where, rule, report, minimum, maximum, control=False):
         report.error(where, rule, 'must not contain control characters')
 
 
+def check_name_and_description(entry, prefix, report, name_required):
+    if name_required or 'name' in entry:
+        check_text(entry.get('name'), f'{prefix}name', 'name', report, 1, 64, control=True)
+    if 'description' in entry:
+        check_text(entry['description'], f'{prefix}description', 'description', report, 0, 280)
+
+
+def check_display_text(owner, prefix, report):
+    """name, description and their localizations, shared by the repository and every pack."""
+    check_name_and_description(owner, prefix, report, name_required=True)
+    if 'localizations' not in owner:
+        return
+    where = f'{prefix}localizations'
+    localizations = owner['localizations']
+    if not isinstance(localizations, dict):
+        report.error(where, 'localizations', 'must be an object keyed by BCP 47 language tag')
+        return
+    seen = {}
+    for tag, entry in localizations.items():
+        place = f'{where}.{tag}'
+        if not LANGUAGE_TAG.fullmatch(tag):
+            report.error(place, 'localizations', f'"{tag}" is not a BCP 47 language tag such as "zh-Hans" or "ja"')
+        elif tag.lower() in seen:
+            report.error(place, 'localizations', f'same language as "{seen[tag.lower()]}" (tags ignore case)')
+        seen.setdefault(tag.lower(), tag)
+        if not isinstance(entry, dict):
+            report.error(place, 'localizations', 'must be an object with optional name and description')
+            continue
+        check_name_and_description(entry, f'{place}.', report, name_required=False)
+        for key in entry.keys() - LOCALIZATION_FIELDS:
+            report.unknown('field', key, f'{place}.{key}')
+
+
 def check_author(author, where, report):
     if not isinstance(author, dict):
         report.error(where, 'author', 'must be an object with "name"')
@@ -422,9 +458,7 @@ def check_pack(root, pack, where, report, cache, unique):
     pack_id = pack.get('id')
     if not isinstance(pack_id, str) or not 1 <= len(pack_id) <= 64 or not PACK_ID.fullmatch(pack_id):
         report.error(f'{where}.id', 'pack-id', 'must be 1-64 characters matching ^[a-z0-9]+(-[a-z0-9]+)*$')
-    check_text(pack.get('name'), f'{where}.name', 'name', report, 1, 64, control=True)
-    if 'description' in pack:
-        check_text(pack['description'], f'{where}.description', 'description', report, 0, 280)
+    check_display_text(pack, f'{where}.', report)
     version = pack.get('version')
     if not is_int(version) or version < 1:
         report.error(f'{where}.version', 'pack-version', 'required integer >= 1')
@@ -461,9 +495,7 @@ def check_manifest(root, manifest, report):
         report.error('id', 'repo-id', 'must be 1-128 characters matching ^[a-z0-9]+([.-][a-z0-9]+)*$')
     elif repo_id == 'builtin':
         report.error('id', 'repo-id', '"builtin" is reserved')
-    check_text(manifest.get('name'), 'name', 'name', report, 1, 64, control=True)
-    if 'description' in manifest:
-        check_text(manifest['description'], 'description', 'description', report, 0, 280)
+    check_display_text(manifest, '', report)
     if 'author' in manifest:
         check_author(manifest['author'], 'author', report)
     if 'homepage' in manifest and not is_https_url(manifest['homepage']):

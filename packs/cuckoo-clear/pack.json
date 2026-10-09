@@ -1,7 +1,12 @@
 {
-  "name": "布谷·清鸣",
-  "englishName": "Clear cuckoo",
-  "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。",
-  "version": 1,
+  "name": "Clear cuckoo",
+  "description": "Original synthesized birdsong: a close, round two-note falling cuckoo call with light breath and a soft throat.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "布谷·清鸣",
+      "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

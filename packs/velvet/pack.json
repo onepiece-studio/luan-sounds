@@ -1,7 +1,12 @@
 {
-  "name": "丝绒",
-  "englishName": "Velvet",
-  "description": "柔软圆润的短和声，适合不想被打断的时候。",
-  "version": 1,
+  "name": "Velvet",
+  "description": "Soft, round short chords for when you would rather not be interrupted.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "丝绒",
+      "description": "柔软圆润的短和声，适合不想被打断的时候。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

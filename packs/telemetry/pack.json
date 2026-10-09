@@ -1,7 +1,12 @@
 {
-  "name": "遥测",
-  "englishName": "Telemetry",
-  "description": "疏落的电子点声，像安静仪表上的小小回应。",
-  "version": 1,
+  "name": "Telemetry",
+  "description": "Sparse electronic blips, like small replies from a quiet instrument panel.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "遥测",
+      "description": "疏落的电子点声，像安静仪表上的小小回应。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

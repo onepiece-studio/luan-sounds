@@ -1,7 +1,12 @@
 {
-  "name": "模拟",
-  "englishName": "Analog",
-  "description": "温暖厚实的合成器短句，带细微的自然起伏。",
-  "version": 1,
+  "name": "Analog",
+  "description": "Warm, full synth phrases with subtle natural movement.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "模拟",
+      "description": "温暖厚实的合成器短句，带细微的自然起伏。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

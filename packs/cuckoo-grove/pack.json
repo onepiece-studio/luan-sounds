@@ -1,7 +1,12 @@
 {
-  "name": "布谷·林间",
-  "englishName": "Grove cuckoo",
-  "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。",
-  "version": 1,
+  "name": "Grove cuckoo",
+  "description": "Original synthesized birdsong: a tighter two-note cuckoo call with richer throat overtones and short woodland reflections.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "布谷·林间",
+      "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

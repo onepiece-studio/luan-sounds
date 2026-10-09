@@ -1,7 +1,12 @@
 {
-  "name": "数码琴",
-  "englishName": "FM Keys",
-  "description": "带一点玻璃质感的电子琴键，清亮收束。",
-  "version": 1,
+  "name": "FM Keys",
+  "description": "Electric piano keys with a touch of glassiness and a bright, clean finish.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "数码琴",
+      "description": "带一点玻璃质感的电子琴键，清亮收束。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

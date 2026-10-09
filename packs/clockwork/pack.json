@@ -1,7 +1,12 @@
 {
-  "name": "钟表",
-  "englishName": "Clockwork",
-  "description": "克制的擒纵滴答、上弦与弹簧轻响。",
-  "version": 1,
+  "name": "Clockwork",
+  "description": "Restrained escapement ticks, winding and light spring sounds.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "钟表",
+      "description": "克制的擒纵滴答、上弦与弹簧轻响。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

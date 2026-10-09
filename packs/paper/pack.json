@@ -1,7 +1,12 @@
 {
-  "name": "纸间",
-  "englishName": "Paper",
-  "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。",
-  "version": 1,
+  "name": "Paper",
+  "description": "Grains like folding paper and turning pages, with a little low end under short rustles.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "纸间",
+      "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

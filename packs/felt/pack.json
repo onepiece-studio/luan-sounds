@@ -1,7 +1,12 @@
 {
-  "name": "毡音",
-  "englishName": "Felt",
-  "description": "柔软毡槌的温暖圆音，缓起而不拖沓。",
-  "version": 1,
+  "name": "Felt",
+  "description": "Warm, round tones from soft felt mallets that start gently without dragging.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "毡音",
+      "description": "柔软毡槌的温暖圆音，缓起而不拖沓。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

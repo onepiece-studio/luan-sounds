@@ -1,7 +1,12 @@
 {
-  "name": "水镜",
-  "englishName": "Water Mirror",
-  "description": "柔和非谐波共鸣，像水面缓慢展开。",
-  "version": 1,
+  "name": "Water Mirror",
+  "description": "Soft inharmonic resonance, like a water surface slowly spreading.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "水镜",
+      "description": "柔和非谐波共鸣，像水面缓慢展开。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

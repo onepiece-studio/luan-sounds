@@ -1,7 +1,12 @@
 {
-  "name": "铜铃",
-  "englishName": "Copper",
-  "description": "有厚度的小铜铃，金属泛音迅速收束。",
-  "version": 1,
+  "name": "Copper",
+  "description": "Small copper bells with body; metallic overtones that fade quickly.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "铜铃",
+      "description": "有厚度的小铜铃，金属泛音迅速收束。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }

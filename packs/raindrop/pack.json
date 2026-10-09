@@ -1,7 +1,12 @@
 {
-  "name": "雨滴",
-  "englishName": "Raindrop",
-  "description": "圆润水珠落下，带短暂滑音与细小水纹。",
-  "version": 1,
+  "name": "Raindrop",
+  "description": "Round falling water drops with brief glides and tiny ripples.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "雨滴",
+      "description": "圆润水珠落下，带短暂滑音与细小水纹。"
+    }
+  },
+  "version": 2,
   "license": "LicenseRef-Luan-Official"
 }
