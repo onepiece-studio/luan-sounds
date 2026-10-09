@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "晶光",
       "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。"
+    },
+    "zh-Hant": {
+      "name": "晶光",
+      "description": "輕亮玻璃脈衝與細微拍頻，尾音乾淨透明。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

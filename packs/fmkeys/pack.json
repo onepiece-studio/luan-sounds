@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "数码琴",
       "description": "带一点玻璃质感的电子琴键，清亮收束。"
+    },
+    "zh-Hant": {
+      "name": "數位琴",
+      "description": "帶一點玻璃質感的電子琴鍵，清亮收束。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

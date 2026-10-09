@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "毡音",
       "description": "柔软毡槌的温暖圆音，缓起而不拖沓。"
+    },
+    "zh-Hant": {
+      "name": "氈音",
+      "description": "柔軟氈槌的溫暖圓音，緩起而不拖沓。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

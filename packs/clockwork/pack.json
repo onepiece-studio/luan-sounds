@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "钟表",
       "description": "克制的擒纵滴答、上弦与弹簧轻响。"
+    },
+    "zh-Hant": {
+      "name": "鐘錶",
+      "description": "克制的擒縱滴答、上弦與彈簧輕響。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

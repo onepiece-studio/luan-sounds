@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "掌机",
       "description": "干净短促的复古按键，轻巧而有明确节奏。"
+    },
+    "zh-Hant": {
+      "name": "掌機",
+      "description": "乾淨短促的復古按鍵，輕巧而有明確節奏。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

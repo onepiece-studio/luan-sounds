@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "卫星",
       "description": "有距离感的空灵点声，留下轻轻的回响。"
+    },
+    "zh-Hant": {
+      "name": "衛星",
+      "description": "有距離感的空靈點聲，留下輕輕的迴響。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

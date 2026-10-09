@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "霓虹",
       "description": "明快利落的电子拨音，带一点跳跃的光泽。"
+    },
+    "zh-Hant": {
+      "name": "霓虹",
+      "description": "明快俐落的電子撥音，帶一點跳躍的光澤。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

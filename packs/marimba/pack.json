@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "木琴",
       "description": "温暖谐波木条与柔槌滚奏。"
+    },
+    "zh-Hant": {
+      "name": "木琴",
+      "description": "溫暖諧波木條與柔槌滾奏。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

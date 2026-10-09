@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "鸾羽",
       "description": "温润的合成鸟鸣、轻气息与中频共鸣；用滑音方向和短句节奏区分事件。"
+    },
+    "zh-Hant": {
+      "name": "鸞羽",
+      "description": "溫潤的合成鳥鳴、輕氣息與中頻共鳴；用滑音方向和短句節奏區分事件。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

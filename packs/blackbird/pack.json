@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "乌鸫·笛语",
       "description": "原创合成仿鸟鸣：流动的笛质滑音与不规则短句，取乌鸫式歌声意象。"
+    },
+    "zh-Hant": {
+      "name": "烏鶇·笛語",
+      "description": "原創合成仿鳥鳴：流動的笛質滑音與不規則短句，取烏鶇式歌聲意象。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

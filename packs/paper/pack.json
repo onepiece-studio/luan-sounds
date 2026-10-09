@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "纸间",
       "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。"
+    },
+    "zh-Hant": {
+      "name": "紙間",
+      "description": "摺紙與翻頁般的顆粒，少量低音托住短促摩擦。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

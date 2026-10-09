@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "模拟",
       "description": "温暖厚实的合成器短句，带细微的自然起伏。"
+    },
+    "zh-Hant": {
+      "name": "類比",
+      "description": "溫暖厚實的合成器短句，帶細微的自然起伏。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

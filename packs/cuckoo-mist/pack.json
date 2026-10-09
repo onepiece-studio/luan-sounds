@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "布谷·晨雾",
       "description": "原创合成仿鸟鸣：较低、较缓的布谷双呼，柔化高频与短余韵营造晨雾距离感。"
+    },
+    "zh-Hant": {
+      "name": "布穀·晨霧",
+      "description": "原創合成仿鳥鳴：較低、較緩的布穀雙呼，柔化高頻與短餘韻營造晨霧距離感。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "星环",
       "description": "圆润电子脉冲与短暂空间共鸣。"
+    },
+    "zh-Hant": {
+      "name": "星環",
+      "description": "圓潤電子脈衝與短暫空間共鳴。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

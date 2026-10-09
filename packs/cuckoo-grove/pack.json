@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "布谷·林间",
       "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。"
+    },
+    "zh-Hant": {
+      "name": "布穀·林間",
+      "description": "原創合成仿鳥鳴：較緊湊的布穀雙音，稍厚的喉腔泛音與林間短反射。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

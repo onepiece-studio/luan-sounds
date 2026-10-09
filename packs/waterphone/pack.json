@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "水镜",
       "description": "柔和非谐波共鸣，像水面缓慢展开。"
+    },
+    "zh-Hant": {
+      "name": "水鏡",
+      "description": "柔和非諧波共鳴，像水面緩慢展開。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

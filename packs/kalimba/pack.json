@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "拇指琴",
       "description": "短拨片和温暖簧片，保留轻微木腔感。"
+    },
+    "zh-Hant": {
+      "name": "拇指琴",
+      "description": "短撥片和溫暖簧片，保留輕微木腔感。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

@@ -1,6 +1,6 @@
-# Luan Official Sound Source
+# Luan Sounds
 
-The official sound source for [Luan](https://luan.fuyo.app): 29 procedurally synthesized sound packs you can preview and use right inside Luan. Every sound was synthesized by code written for Luan; no recordings or third-party samples.
+[Luan](https://luan.fuyo.app)'s own sound source: 29 procedurally synthesized sound packs you can preview and use right inside Luan. Every sound was synthesized by code written for Luan; no recordings or third-party samples.
 
 ## Add it in Luan
 

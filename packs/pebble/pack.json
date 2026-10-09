@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "卵石",
       "description": "短促干燥的石击与轻回弹。"
+    },
+    "zh-Hant": {
+      "name": "卵石",
+      "description": "短促乾燥的石擊與輕回彈。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

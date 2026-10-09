@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "柳莺·轻啭",
       "description": "原创合成仿鸟鸣：短而柔的曲线轻啭，用克制的颤动表达柳莺意象。"
+    },
+    "zh-Hant": {
+      "name": "柳鶯·輕囀",
+      "description": "原創合成仿鳥鳴：短而柔的曲線輕囀，用克制的顫動表達柳鶯意象。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "铜铃",
       "description": "有厚度的小铜铃，金属泛音迅速收束。"
+    },
+    "zh-Hant": {
+      "name": "銅鈴",
+      "description": "有厚度的小銅鈴，金屬泛音迅速收束。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

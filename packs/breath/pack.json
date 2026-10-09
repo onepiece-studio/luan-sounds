@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "微风",
       "description": "圆润气流与轻哨管的起落。"
+    },
+    "zh-Hant": {
+      "name": "微風",
+      "description": "圓潤氣流與輕哨管的起落。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

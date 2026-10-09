@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "雨滴",
       "description": "圆润水珠落下，带短暂滑音与细小水纹。"
+    },
+    "zh-Hant": {
+      "name": "雨滴",
+      "description": "圓潤水珠落下，帶短暫滑音與細小水紋。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

@@ -1,12 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "app.fuyo.luan.official",
-  "name": "Luan Official Sounds",
+  "name": "Luan Sounds",
   "description": "Procedurally synthesized sound packs made for Luan, ready to preview and use in the app.",
   "localizations": {
     "zh-Hans": {
-      "name": "Luan 官方音效",
-      "description": "Luan 官方出品的程序合成音效包，可在 Luan 中直接试听和选用。"
+      "name": "Luan 音效",
+      "description": "为 Luan 制作的程序合成音效包，可在 App 中直接试听和选用。"
+    },
+    "zh-Hant": {
+      "name": "Luan 音效",
+      "description": "專為 Luan 製作、以程式合成的音效包，可在 App 中直接試聽與選用。"
     }
   },
   "author": {
@@ -24,9 +28,13 @@
         "zh-Hans": {
           "name": "模拟",
           "description": "温暖厚实的合成器短句，带细微的自然起伏。"
+        },
+        "zh-Hant": {
+          "name": "類比",
+          "description": "溫暖厚實的合成器短句，帶細微的自然起伏。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -84,9 +92,13 @@
         "zh-Hans": {
           "name": "乌鸫·笛语",
           "description": "原创合成仿鸟鸣：流动的笛质滑音与不规则短句，取乌鸫式歌声意象。"
+        },
+        "zh-Hant": {
+          "name": "烏鶇·笛語",
+          "description": "原創合成仿鳥鳴：流動的笛質滑音與不規則短句，取烏鶇式歌聲意象。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -144,9 +156,13 @@
         "zh-Hans": {
           "name": "微风",
           "description": "圆润气流与轻哨管的起落。"
+        },
+        "zh-Hant": {
+          "name": "微風",
+          "description": "圓潤氣流與輕哨管的起落。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -204,9 +220,13 @@
         "zh-Hans": {
           "name": "钟表",
           "description": "克制的擒纵滴答、上弦与弹簧轻响。"
+        },
+        "zh-Hant": {
+          "name": "鐘錶",
+          "description": "克制的擒縱滴答、上弦與彈簧輕響。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -264,9 +284,13 @@
         "zh-Hans": {
           "name": "掌机",
           "description": "干净短促的复古按键，轻巧而有明确节奏。"
+        },
+        "zh-Hant": {
+          "name": "掌機",
+          "description": "乾淨短促的復古按鍵，輕巧而有明確節奏。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -324,9 +348,13 @@
         "zh-Hans": {
           "name": "铜铃",
           "description": "有厚度的小铜铃，金属泛音迅速收束。"
+        },
+        "zh-Hant": {
+          "name": "銅鈴",
+          "description": "有厚度的小銅鈴，金屬泛音迅速收束。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -384,9 +412,13 @@
         "zh-Hans": {
           "name": "晶光",
           "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。"
+        },
+        "zh-Hant": {
+          "name": "晶光",
+          "description": "輕亮玻璃脈衝與細微拍頻，尾音乾淨透明。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -444,9 +476,13 @@
         "zh-Hans": {
           "name": "布谷·清鸣",
           "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。"
+        },
+        "zh-Hant": {
+          "name": "布穀·清鳴",
+          "description": "原創合成仿鳥鳴：近處、圓潤的布穀雙音下行，帶輕氣息與柔和喉腔。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -504,9 +540,13 @@
         "zh-Hans": {
           "name": "布谷·林间",
           "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。"
+        },
+        "zh-Hant": {
+          "name": "布穀·林間",
+          "description": "原創合成仿鳥鳴：較緊湊的布穀雙音，稍厚的喉腔泛音與林間短反射。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -564,9 +604,13 @@
         "zh-Hans": {
           "name": "布谷·晨雾",
           "description": "原创合成仿鸟鸣：较低、较缓的布谷双呼，柔化高频与短余韵营造晨雾距离感。"
+        },
+        "zh-Hant": {
+          "name": "布穀·晨霧",
+          "description": "原創合成仿鳥鳴：較低、較緩的布穀雙呼，柔化高頻與短餘韻營造晨霧距離感。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -624,9 +668,13 @@
         "zh-Hans": {
           "name": "斑鸠·低吟",
           "description": "原创合成仿鸟鸣：低柔的 coo 声腔、缓起音与轻喉颤，适合安静工作提示。"
+        },
+        "zh-Hant": {
+          "name": "斑鳩·低吟",
+          "description": "原創合成仿鳥鳴：低柔的 coo 聲腔、緩起音與輕喉顫，適合安靜工作提示。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -684,9 +732,13 @@
         "zh-Hans": {
           "name": "鸾羽",
           "description": "温润的合成鸟鸣、轻气息与中频共鸣；用滑音方向和短句节奏区分事件。"
+        },
+        "zh-Hant": {
+          "name": "鸞羽",
+          "description": "溫潤的合成鳥鳴、輕氣息與中頻共鳴；用滑音方向和短句節奏區分事件。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -744,9 +796,13 @@
         "zh-Hans": {
           "name": "毡音",
           "description": "柔软毡槌的温暖圆音，缓起而不拖沓。"
+        },
+        "zh-Hant": {
+          "name": "氈音",
+          "description": "柔軟氈槌的溫暖圓音，緩起而不拖沓。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -804,9 +860,13 @@
         "zh-Hans": {
           "name": "数码琴",
           "description": "带一点玻璃质感的电子琴键，清亮收束。"
+        },
+        "zh-Hant": {
+          "name": "數位琴",
+          "description": "帶一點玻璃質感的電子琴鍵，清亮收束。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -864,9 +924,13 @@
         "zh-Hans": {
           "name": "拇指琴",
           "description": "短拨片和温暖簧片，保留轻微木腔感。"
+        },
+        "zh-Hant": {
+          "name": "拇指琴",
+          "description": "短撥片和溫暖簧片，保留輕微木腔感。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -924,9 +988,13 @@
         "zh-Hans": {
           "name": "木琴",
           "description": "温暖谐波木条与柔槌滚奏。"
+        },
+        "zh-Hant": {
+          "name": "木琴",
+          "description": "溫暖諧波木條與柔槌滾奏。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -984,9 +1052,13 @@
         "zh-Hans": {
           "name": "霓虹",
           "description": "明快利落的电子拨音，带一点跳跃的光泽。"
+        },
+        "zh-Hant": {
+          "name": "霓虹",
+          "description": "明快俐落的電子撥音，帶一點跳躍的光澤。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1044,9 +1116,13 @@
         "zh-Hans": {
           "name": "星环",
           "description": "圆润电子脉冲与短暂空间共鸣。"
+        },
+        "zh-Hant": {
+          "name": "星環",
+          "description": "圓潤電子脈衝與短暫空間共鳴。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1104,9 +1180,13 @@
         "zh-Hans": {
           "name": "纸间",
           "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。"
+        },
+        "zh-Hant": {
+          "name": "紙間",
+          "description": "摺紙與翻頁般的顆粒，少量低音托住短促摩擦。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1164,9 +1244,13 @@
         "zh-Hans": {
           "name": "卵石",
           "description": "短促干燥的石击与轻回弹。"
+        },
+        "zh-Hant": {
+          "name": "卵石",
+          "description": "短促乾燥的石擊與輕回彈。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1224,9 +1308,13 @@
         "zh-Hans": {
           "name": "弦语",
           "description": "细密拨弦泛音与指腹止音。"
+        },
+        "zh-Hant": {
+          "name": "弦語",
+          "description": "細密撥弦泛音與指腹止音。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1284,9 +1372,13 @@
         "zh-Hans": {
           "name": "瓷响",
           "description": "清透柔和的瓷质共鸣与轻敲。"
+        },
+        "zh-Hant": {
+          "name": "瓷響",
+          "description": "清透柔和的瓷質共鳴與輕敲。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1344,9 +1436,13 @@
         "zh-Hans": {
           "name": "雨滴",
           "description": "圆润水珠落下，带短暂滑音与细小水纹。"
+        },
+        "zh-Hant": {
+          "name": "雨滴",
+          "description": "圓潤水珠落下，帶短暫滑音與細小水紋。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1404,9 +1500,13 @@
         "zh-Hans": {
           "name": "卫星",
           "description": "有距离感的空灵点声，留下轻轻的回响。"
+        },
+        "zh-Hant": {
+          "name": "衛星",
+          "description": "有距離感的空靈點聲，留下輕輕的迴響。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1464,9 +1564,13 @@
         "zh-Hans": {
           "name": "遥测",
           "description": "疏落的电子点声，像安静仪表上的小小回应。"
+        },
+        "zh-Hant": {
+          "name": "遙測",
+          "description": "疏落的電子點聲，像安靜儀表上的小小回應。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1524,9 +1628,13 @@
         "zh-Hans": {
           "name": "丝绒",
           "description": "柔软圆润的短和声，适合不想被打断的时候。"
+        },
+        "zh-Hant": {
+          "name": "絲絨",
+          "description": "柔軟圓潤的短和聲，適合不想被打斷的時候。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1584,9 +1692,13 @@
         "zh-Hans": {
           "name": "柳莺·轻啭",
           "description": "原创合成仿鸟鸣：短而柔的曲线轻啭，用克制的颤动表达柳莺意象。"
+        },
+        "zh-Hant": {
+          "name": "柳鶯·輕囀",
+          "description": "原創合成仿鳥鳴：短而柔的曲線輕囀，用克制的顫動表達柳鶯意象。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1644,9 +1756,13 @@
         "zh-Hans": {
           "name": "水镜",
           "description": "柔和非谐波共鸣，像水面缓慢展开。"
+        },
+        "zh-Hant": {
+          "name": "水鏡",
+          "description": "柔和非諧波共鳴，像水面緩慢展開。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {
@@ -1704,9 +1820,13 @@
         "zh-Hans": {
           "name": "木语",
           "description": "干燥温暖的木质拨奏与短敲。"
+        },
+        "zh-Hant": {
+          "name": "木語",
+          "description": "乾燥溫暖的木質撥奏與短敲。"
         }
       },
-      "version": 2,
+      "version": 3,
       "license": "LicenseRef-Luan-Official",
       "sounds": {
         "session-start": {

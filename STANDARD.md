@@ -171,7 +171,7 @@ To publish a change to a pack, change its files or metadata, raise `version` in 
 
 ## 7. Badges
 
-Luan ships a short list of URL prefixes with a badge for each. A repository whose URL starts with one of them shows that badge in the app; the official repository, `https://raw.githubusercontent.com/onepiece-studio/luan-sounds/`, shows "Official". The list is curated by Luan and changes only with a new app release.
+Luan ships a short list of URL prefixes with a badge for each. A repository whose URL starts with one of them shows that badge in the app; trusted publishers show "Verified". Luan's own sound source, `https://raw.githubusercontent.com/onepiece-studio/luan-sounds/`, is one of them. The list is curated by Luan and changes only with a new app release.
 
 A badge says who controls the address. It says nothing else. The SHA-256 values in a manifest only prove that the downloaded files are the ones the manifest lists; they do not prove who published it.
 
@@ -184,7 +184,7 @@ python3 tools/luan_repo.py check .   # check only; exit status 1 on any error
 
 Each problem is printed as `error: <where>: <message> [<rule>]`. Warnings (unknown fields, loud peaks) do not change the exit status.
 
-To check every push on GitHub, copy `tools/luan_repo.py` into your repository and add `.github/workflows/check.yml` from the official repository: <https://github.com/onepiece-studio/luan-sounds>. The JSON Schema `schema/luan-v1.schema.json` covers the manifest structure for editors; the tool covers everything else (hashes, sizes, audio).
+To check every push on GitHub, copy `tools/luan_repo.py` into your repository and add `.github/workflows/check.yml` from Luan's own sound source: <https://github.com/onepiece-studio/luan-sounds>. The JSON Schema `schema/luan-v1.schema.json` covers the manifest structure for editors; the tool covers everything else (hashes, sizes, audio).
 
 ## 9. Licensing your sounds
 

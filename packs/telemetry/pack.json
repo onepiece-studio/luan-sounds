@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "遥测",
       "description": "疏落的电子点声，像安静仪表上的小小回应。"
+    },
+    "zh-Hant": {
+      "name": "遙測",
+      "description": "疏落的電子點聲，像安靜儀表上的小小回應。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }

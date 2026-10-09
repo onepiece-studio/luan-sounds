@@ -5,8 +5,12 @@
     "zh-Hans": {
       "name": "瓷响",
       "description": "清透柔和的瓷质共鸣与轻敲。"
+    },
+    "zh-Hant": {
+      "name": "瓷響",
+      "description": "清透柔和的瓷質共鳴與輕敲。"
     }
   },
-  "version": 2,
+  "version": 3,
   "license": "LicenseRef-Luan-Official"
 }
