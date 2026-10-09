@@ -1,6 +1,6 @@
 # Luan Sound Repository Standard v1
 
-A Luan sound repository is a set of static files on the web: one manifest, `luan.json`, plus WAV files. Anyone can publish one. Luan Pro users add it by pasting the URL of its `luan.json`, then pick a pack from it. In the Luan app these repositories are called **sound sources**.
+A Luan sound repository is a set of static files on the web: one manifest, `luan.json`, plus WAV files. Anyone can publish one. Luan Pro users add it by pasting its address, then pick a pack from it. In the Luan app these repositories are called **sound sources**.
 
 This document is for repository authors. It defines the manifest, the audio rules and the hosting rules. `tools/luan_repo.py` (Python 3 standard library only) builds the manifest and enforces every rule below.
 
@@ -155,7 +155,21 @@ Luan measures the peak and RMS of every sound and, if it is louder than the buil
 - Every file must be served over HTTPS with its exact bytes.
 - All files must be on the same host as `luan.json`, in the same directory or below it. Redirects are followed only within that scope.
 - GitHub raw URLs (`https://raw.githubusercontent.com/<owner>/<repo>/<branch>/luan.json`) and GitHub Pages work. GitHub Releases assets do not: they redirect to another host.
+- jsDelivr's GitHub mirror (`https://cdn.jsdelivr.net/gh/<owner>/<repo>@<ref>/luan.json`) also works. It caches branch addresses such as `@main` for up to about 12 hours, so an update may reach users late; a tag or commit ref (`@v3`, `@<commit>`) is never stale.
 - Paths are case-sensitive on most hosts. Do not commit symlinks; GitHub raw serves a symlink as a small text file.
+
+Addresses users can paste into Luan:
+
+| Pasted address | Luan reads |
+|---|---|
+| `https://github.com/<owner>/<repo>` (optionally ending in `/` or `.git`) | `https://raw.githubusercontent.com/<owner>/<repo>/HEAD/luan.json`, the default branch |
+| `https://github.com/<owner>/<repo>/tree/<ref>/<folder>` | `https://raw.githubusercontent.com/<owner>/<repo>/<ref>/<folder>/luan.json` |
+| `https://github.com/<owner>/<repo>/blob/<ref>/<path>/luan.json` | the matching `raw.githubusercontent.com` address |
+| `https://cdn.jsdelivr.net/gh/<owner>/<repo>[@<ref>]` with nothing after it | that address plus `/luan.json` |
+| any other HTTPS address ending in `.json` | that address as is |
+| any other HTTPS address ending in `/`, or whose last segment has no extension | that address plus `/luan.json` |
+
+A ref that contains `/` (for example `feature/x`) cannot be told apart from a folder in a GitHub page address: Luan takes the first segment as the ref. Paste the `raw.githubusercontent.com` address instead. Addresses with `http://`, a user name or password, `?` or `#` are rejected. Every hosting rule above applies to the address Luan reads, not to the one pasted.
 
 ## 6. Updates
 
@@ -169,9 +183,9 @@ To publish a change to a pack, change its files or metadata, raise `version` in 
 
 `luan_repo.py build` refuses to write a manifest in which a changed pack kept its version. `luan_repo.py check . --previous old-luan.json` applies the same comparison against a previously published manifest; the sample CI workflow does this for every push and pull request.
 
-## 7. Badges
+## 7. Verified publishers
 
-Luan ships a short list of URL prefixes with a badge for each. A repository whose URL starts with one of them shows that badge in the app; trusted publishers show "Verified". Luan's own sound source, `https://raw.githubusercontent.com/onepiece-studio/luan-sounds/`, is one of them. The list is curated by Luan and changes only with a new app release.
+Luan ships a short list of verified publishers, each with the URL prefixes it controls. A repository whose manifest address starts with one of those prefixes shows a "Verified" badge in the app, with the publisher's name where there is room (for example "Verified · Luan"); any other repository is shown as unverified when the user is asked to confirm adding it. The prefix is compared, ignoring case, with the address Luan reads after resolving what was pasted (see §5), so a repository gets the same result whichever form was pasted. Luan's own repository is verified when read from `https://raw.githubusercontent.com/onepiece-studio/luan-sounds/` or from `https://cdn.jsdelivr.net/gh/onepiece-studio/luan-sounds@` (any ref). The list is curated by Luan and changes only with a new app release.
 
 A badge says who controls the address. It says nothing else. The SHA-256 values in a manifest only prove that the downloaded files are the ones the manifest lists; they do not prove who published it.
 
@@ -184,7 +198,7 @@ python3 tools/luan_repo.py check .   # check only; exit status 1 on any error
 
 Each problem is printed as `error: <where>: <message> [<rule>]`. Warnings (unknown fields, loud peaks) do not change the exit status.
 
-To check every push on GitHub, copy `tools/luan_repo.py` into your repository and add `.github/workflows/check.yml` from Luan's own sound source: <https://github.com/onepiece-studio/luan-sounds>. The JSON Schema `schema/luan-v1.schema.json` covers the manifest structure for editors; the tool covers everything else (hashes, sizes, audio).
+To check every push on GitHub, copy `tools/luan_repo.py` into your repository and add `.github/workflows/check.yml` from the official repository: <https://github.com/onepiece-studio/luan-sounds>. The JSON Schema `schema/luan-v1.schema.json` covers the manifest structure for editors; the tool covers everything else (hashes, sizes, audio).
 
 ## 9. Licensing your sounds
 
