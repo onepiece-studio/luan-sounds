@@ -1,0 +1,1609 @@
+{
+  "schemaVersion": 1,
+  "id": "app.fuyo.luan.official",
+  "name": "Luan 官方音效",
+  "description": "Luan 官方出品的程序合成音效包，可在 Luan 中直接试听和选用。Official sound packs for Luan.",
+  "author": {
+    "name": "fuyo",
+    "email": "luan@fuyo.app",
+    "url": "https://luan.fuyo.app"
+  },
+  "homepage": "https://github.com/onepiece-studio/luan-sounds",
+  "packs": [
+    {
+      "id": "analog",
+      "name": "模拟",
+      "englishName": "Analog",
+      "description": "温暖厚实的合成器短句，带细微的自然起伏。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/analog/session-start.wav",
+          "sha256": "db48aeaf174f1f6299b1127def970d4ebe82700d9e0b7eccd9ae71f0359c76d7",
+          "size": 46124
+        },
+        "task-acknowledge": {
+          "file": "packs/analog/task-acknowledge.wav",
+          "sha256": "196964c3fc7d195b203e52a7c7e70b7423e0620ad6c222d16cd257d5b2ab7915",
+          "size": 22124
+        },
+        "task-complete": {
+          "file": "packs/analog/task-complete.wav",
+          "sha256": "c4f3ac5420a85b3fb8933327fc2736f17c6a6d8f79635f50020ff089dddf11ef",
+          "size": 57644
+        },
+        "task-error": {
+          "file": "packs/analog/task-error.wav",
+          "sha256": "591bb3ef2b73bce051ed024427990b704b4b89e4c5b47f92f3256f8453ba8056",
+          "size": 41324
+        },
+        "input-required": {
+          "file": "packs/analog/input-required.wav",
+          "sha256": "2896c6314382293696f04171da204c39804ba87f181770a9925b0a455851e564",
+          "size": 45164
+        },
+        "input-required-question": {
+          "file": "packs/analog/input-required-question.wav",
+          "sha256": "6b87fe9c263f29732bef079d859b7b44b4513520560820d050c05c3b349d026a",
+          "size": 52844
+        },
+        "resource-limit": {
+          "file": "packs/analog/resource-limit.wav",
+          "sha256": "f81cfbe0a5d6de4cb05565778c2dcc94320d6f87c18e55d89d65a3814679096e",
+          "size": 46124
+        },
+        "user-spam": {
+          "file": "packs/analog/user-spam.wav",
+          "sha256": "143242be5ed5f20b620829472a7fb1ee0ababcb04443f6aee2b7c944a0dc19f2",
+          "size": 27884
+        },
+        "idle-reminder": {
+          "file": "packs/analog/idle-reminder.wav",
+          "sha256": "f51b547d2237011d8461b22fab1fd186aa9dc247071309d7fc82dfaae0f55fb0",
+          "size": 57644
+        }
+      }
+    },
+    {
+      "id": "blackbird",
+      "name": "乌鸫·笛语",
+      "englishName": "Blackbird flute",
+      "description": "原创合成仿鸟鸣：流动的笛质滑音与不规则短句，取乌鸫式歌声意象。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/blackbird/session-start.wav",
+          "sha256": "5d5f647e93748f80486b827c3396af193f4ddcbafd4039b0ce0cb1e39cc459d4",
+          "size": 58892
+        },
+        "task-acknowledge": {
+          "file": "packs/blackbird/task-acknowledge.wav",
+          "sha256": "e220fb7559678a051e4c1467bd80ea311b8cf5a99c72e42eef9138cf839b8309",
+          "size": 28652
+        },
+        "task-complete": {
+          "file": "packs/blackbird/task-complete.wav",
+          "sha256": "7f7e01f63875e78b412b871f1d009f295f15d7829eb792aac7284aa7ce13b4e7",
+          "size": 81452
+        },
+        "task-error": {
+          "file": "packs/blackbird/task-error.wav",
+          "sha256": "b1099fbb29d1a08f5aa3deddf9fdb021973771e45b31bed46d0ef81a8b846a93",
+          "size": 50732
+        },
+        "input-required": {
+          "file": "packs/blackbird/input-required.wav",
+          "sha256": "898987b05908c9cc1fd957e0ebcc00826f53a72b638017c1d0881794611cacc4",
+          "size": 60332
+        },
+        "input-required-question": {
+          "file": "packs/blackbird/input-required-question.wav",
+          "sha256": "585b04ac2e78a978a10a558816eb1cc3cbab8dc01925018ba85535b730e9713d",
+          "size": 56492
+        },
+        "resource-limit": {
+          "file": "packs/blackbird/resource-limit.wav",
+          "sha256": "9877755d0d2312df15cc8af4b5034ee22b4ebc86a0bd56b57449f033a2247385",
+          "size": 60332
+        },
+        "user-spam": {
+          "file": "packs/blackbird/user-spam.wav",
+          "sha256": "16f567fc4864034e13e7c967a4500cef267baa9a2d042045f359456d7ce7e21c",
+          "size": 47852
+        },
+        "idle-reminder": {
+          "file": "packs/blackbird/idle-reminder.wav",
+          "sha256": "efaf5432d6c15c7f365cef2271b1f637289fbc134f5f9c5925582e22a7c054ed",
+          "size": 43052
+        }
+      }
+    },
+    {
+      "id": "breath",
+      "name": "微风",
+      "englishName": "Breeze",
+      "description": "圆润气流与轻哨管的起落。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/breath/session-start.wav",
+          "sha256": "fe2f1e53a46b7ae6fddcd8c2fef2fc3c2cb02e507a58b42f1055a369e3b94a16",
+          "size": 50924
+        },
+        "task-acknowledge": {
+          "file": "packs/breath/task-acknowledge.wav",
+          "sha256": "080961ccf71d3df7b1a6e74edef8bf48faadca2e38747a9e3ac450909e169cc6",
+          "size": 17324
+        },
+        "task-complete": {
+          "file": "packs/breath/task-complete.wav",
+          "sha256": "87116e582fcfef0a9bf07d40f415e5e1a674a403da23ffd97f7a2fec09f0a271",
+          "size": 62444
+        },
+        "task-error": {
+          "file": "packs/breath/task-error.wav",
+          "sha256": "12c717d4aabeb96f8801c178581cf32db80e2c76780274ca90e353bd8d1ae153",
+          "size": 35564
+        },
+        "input-required": {
+          "file": "packs/breath/input-required.wav",
+          "sha256": "d189f8c35eecc0ec57aa28d0308cbc3d41602a11928046afa34415a0e57393d1",
+          "size": 45164
+        },
+        "input-required-question": {
+          "file": "packs/breath/input-required-question.wav",
+          "sha256": "b4f5aa702a28679307dfefd6b4c22be13ef68c3661d636c2f99db9cc3a6e8e0c",
+          "size": 52844
+        },
+        "resource-limit": {
+          "file": "packs/breath/resource-limit.wav",
+          "sha256": "119d9c630ee102a2ecff0cd3547348c9f59393b59fc838156e4271fb547a7e8c",
+          "size": 39404
+        },
+        "user-spam": {
+          "file": "packs/breath/user-spam.wav",
+          "sha256": "f5ff2af4db39d04dd67091e442d9e7584d918aed7247743e0908f00f97b4ec42",
+          "size": 22124
+        },
+        "idle-reminder": {
+          "file": "packs/breath/idle-reminder.wav",
+          "sha256": "e4ace6e798402b013da7d09c3c4654820914620214fe1a12f6add5df46f56eeb",
+          "size": 64364
+        }
+      }
+    },
+    {
+      "id": "clockwork",
+      "name": "钟表",
+      "englishName": "Clockwork",
+      "description": "克制的擒纵滴答、上弦与弹簧轻响。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/clockwork/session-start.wav",
+          "sha256": "da0174aadcaea2bf140636dd03386482637e1a94dc201d4b98750b8ceae323a8",
+          "size": 41324
+        },
+        "task-acknowledge": {
+          "file": "packs/clockwork/task-acknowledge.wav",
+          "sha256": "eed827a11f086a1c698871882b4f028dd4f306bb8470f9ac5bc747e68de83c47",
+          "size": 12524
+        },
+        "task-complete": {
+          "file": "packs/clockwork/task-complete.wav",
+          "sha256": "b16fb6106d28388ab7c642dabec1824170c5ab26bf15825e504423de2b1a6e3c",
+          "size": 53804
+        },
+        "task-error": {
+          "file": "packs/clockwork/task-error.wav",
+          "sha256": "890315736509ac290940a28049ae4cd1f85ce9d6a3d321b63e4fd3d5e4f40b9f",
+          "size": 29804
+        },
+        "input-required": {
+          "file": "packs/clockwork/input-required.wav",
+          "sha256": "a9967b128c9225491ac1d6fcaa1805c75a335643657a83d463fb9ba876c8f112",
+          "size": 38444
+        },
+        "input-required-question": {
+          "file": "packs/clockwork/input-required-question.wav",
+          "sha256": "8701d79334ff82002fbcb269e7dbddcb846034cdbeeacee8719090469eefdd7d",
+          "size": 44204
+        },
+        "resource-limit": {
+          "file": "packs/clockwork/resource-limit.wav",
+          "sha256": "8d4505e3a5333322ff52bf9617a134410f30983d0870e7de42902669491f7b3e",
+          "size": 38444
+        },
+        "user-spam": {
+          "file": "packs/clockwork/user-spam.wav",
+          "sha256": "1161357d1ac124767dbfa8bc4832dfe75c43cff73b81171f51d7d484efdaf50b",
+          "size": 18284
+        },
+        "idle-reminder": {
+          "file": "packs/clockwork/idle-reminder.wav",
+          "sha256": "e9780817c0152ea6fa848ad29093c73710b7829f356f2091beb87d9797178c7c",
+          "size": 51884
+        }
+      }
+    },
+    {
+      "id": "console",
+      "name": "掌机",
+      "englishName": "Console",
+      "description": "干净短促的复古按键，轻巧而有明确节奏。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/console/session-start.wav",
+          "sha256": "3971f388feb5102e51822982feaffc6802674c947484a66390993806277babc1",
+          "size": 27884
+        },
+        "task-acknowledge": {
+          "file": "packs/console/task-acknowledge.wav",
+          "sha256": "048e61054607814a9b49ea976da9607d85c424bd1f16fd3048c1a17e7178930e",
+          "size": 9644
+        },
+        "task-complete": {
+          "file": "packs/console/task-complete.wav",
+          "sha256": "647dc062fa3f4a94f7a47b415890adaac54a8b4fcc2788d2cc4db93ec2c44815",
+          "size": 34604
+        },
+        "task-error": {
+          "file": "packs/console/task-error.wav",
+          "sha256": "0ec0265a0da3aa8acaab790c72323872f3b8a99d801437188d2f4a691b154d29",
+          "size": 25964
+        },
+        "input-required": {
+          "file": "packs/console/input-required.wav",
+          "sha256": "fff958f9406822c2ab443dd067972237fcca942dc79105a76e8d0cc245ded289",
+          "size": 29804
+        },
+        "input-required-question": {
+          "file": "packs/console/input-required-question.wav",
+          "sha256": "41a521a65d319b8320cb34472ec37c5ba402a3d2a782be099d6eee060db8e4fa",
+          "size": 30764
+        },
+        "resource-limit": {
+          "file": "packs/console/resource-limit.wav",
+          "sha256": "96e03b111bfbc9e213882d58c2ff7cfeaf2aaa15a96645c84b7ced4de5db73fd",
+          "size": 32684
+        },
+        "user-spam": {
+          "file": "packs/console/user-spam.wav",
+          "sha256": "393acfe03f0072e7a72c9bbe3f663a8b2c59d8669910d59f2cd79aaf93958b13",
+          "size": 17324
+        },
+        "idle-reminder": {
+          "file": "packs/console/idle-reminder.wav",
+          "sha256": "f4d52f87771f6033b57c5d434ebabb62eb2a53f60564a57a1b4df1157ff72415",
+          "size": 33644
+        }
+      }
+    },
+    {
+      "id": "copper",
+      "name": "铜铃",
+      "englishName": "Copper",
+      "description": "有厚度的小铜铃，金属泛音迅速收束。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/copper/session-start.wav",
+          "sha256": "abdfbf5d5644331feb5e62bbb7449f83752490fc84124c181799b298dadeb7cc",
+          "size": 49004
+        },
+        "task-acknowledge": {
+          "file": "packs/copper/task-acknowledge.wav",
+          "sha256": "241f8518bc72006998ed3fe178874a75d4962ed1ba93b19d13c53ab56325134b",
+          "size": 34604
+        },
+        "task-complete": {
+          "file": "packs/copper/task-complete.wav",
+          "sha256": "4f02754d573f4e57d1a429ffe52cababf040ebefe56c926aa7a0c9b15c435219",
+          "size": 46124
+        },
+        "task-error": {
+          "file": "packs/copper/task-error.wav",
+          "sha256": "3991f7817d275c0105666b156d07d1c0e4da76f1bbf17c291496a83d94249df3",
+          "size": 51884
+        },
+        "input-required": {
+          "file": "packs/copper/input-required.wav",
+          "sha256": "904bcba2fdebc9975140af97fc0140ac4bb1a7febfdd212a650ef937fe7fe66a",
+          "size": 59564
+        },
+        "input-required-question": {
+          "file": "packs/copper/input-required-question.wav",
+          "sha256": "19e6ba5f9fd4bf1ab3c893a161be1d5cc99eb96bf3f585a2ecb56348ba32d86d",
+          "size": 55724
+        },
+        "resource-limit": {
+          "file": "packs/copper/resource-limit.wav",
+          "sha256": "4a777a3b5841447d023dc763f391e7d0d476d199454fb89d8ec501427dbba66d",
+          "size": 48044
+        },
+        "user-spam": {
+          "file": "packs/copper/user-spam.wav",
+          "sha256": "7bce7dad1b2a685bf5f234325534198bf350b8cd93be7f61e725e29471862b74",
+          "size": 47564
+        },
+        "idle-reminder": {
+          "file": "packs/copper/idle-reminder.wav",
+          "sha256": "9e88ed4a78dbb998d054add500f7547f4a17960dffeec78fc736a6e11571ba58",
+          "size": 34604
+        }
+      }
+    },
+    {
+      "id": "crystal",
+      "name": "晶光",
+      "englishName": "Crystal",
+      "description": "轻亮玻璃脉冲与细微拍频，尾音干净透明。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/crystal/session-start.wav",
+          "sha256": "35f9dfdfbe15d71fd611958476f7f75cc2c87213ecbefd41e2929bf124e76517",
+          "size": 49004
+        },
+        "task-acknowledge": {
+          "file": "packs/crystal/task-acknowledge.wav",
+          "sha256": "21372f818eec9fa6bf9326f115e54876d4eb591c8c0312d7920c6d43ecfc1129",
+          "size": 32684
+        },
+        "task-complete": {
+          "file": "packs/crystal/task-complete.wav",
+          "sha256": "c3d6a0ac822065e1e02cda9c3355f78dd4c6c656cbc814adc8bb9b5742ecb3e8",
+          "size": 58604
+        },
+        "task-error": {
+          "file": "packs/crystal/task-error.wav",
+          "sha256": "af001a4e54e1bb8d472b0d8e4a92e5a908884c71d20903609e19f7cb7b73916f",
+          "size": 50924
+        },
+        "input-required": {
+          "file": "packs/crystal/input-required.wav",
+          "sha256": "1b38305e0555a9efeb248302b00b8c747f92ba70e164722135c4047070c9dd6e",
+          "size": 58604
+        },
+        "input-required-question": {
+          "file": "packs/crystal/input-required-question.wav",
+          "sha256": "311f7647f73a0e14430baea0832478244adc28b195cbb4dc3b5fb54696c75f57",
+          "size": 54764
+        },
+        "resource-limit": {
+          "file": "packs/crystal/resource-limit.wav",
+          "sha256": "be5ff0bb9f1996f121df7277fc70337c983172d5418d0ec1b51d5b534b73838e",
+          "size": 58604
+        },
+        "user-spam": {
+          "file": "packs/crystal/user-spam.wav",
+          "sha256": "3f6266bb8493abc1ab6707e621e2f8f4f198cc7f5e693137c04f2a27652c7d5e",
+          "size": 44684
+        },
+        "idle-reminder": {
+          "file": "packs/crystal/idle-reminder.wav",
+          "sha256": "1b3be828c9ef2b60580a5dfe96018424e8484fc9339ba0aec6002baa19b1a911",
+          "size": 32684
+        }
+      }
+    },
+    {
+      "id": "cuckoo-clear",
+      "name": "布谷·清鸣",
+      "englishName": "Clear cuckoo",
+      "description": "原创合成仿鸟鸣：近处、圆润的布谷双音下行，带轻气息与柔和喉腔。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/cuckoo-clear/session-start.wav",
+          "sha256": "8cfeaacbebaa664a7ac6dc01d983999bb64844eacdfb92bf1cbc6e5ae93cfa09",
+          "size": 57068
+        },
+        "task-acknowledge": {
+          "file": "packs/cuckoo-clear/task-acknowledge.wav",
+          "sha256": "545ea03dbc0498646c04ab9ed6cfec9d35f0cd7fd458cf4b23354b0f34d08f5a",
+          "size": 36044
+        },
+        "task-complete": {
+          "file": "packs/cuckoo-clear/task-complete.wav",
+          "sha256": "bd07cb19a104cdc5607612301c1975762bf8596cedc4487d15850e29263b1e44",
+          "size": 102092
+        },
+        "task-error": {
+          "file": "packs/cuckoo-clear/task-error.wav",
+          "sha256": "deb1dce13fedd3bb1ae706ce92cc37901c520f03704dbe841fa71ddc9b89d62f",
+          "size": 68780
+        },
+        "input-required": {
+          "file": "packs/cuckoo-clear/input-required.wav",
+          "sha256": "0aa5afc3686b7d0c62989b1e27c8a50737d674ad55a37b13bd1aae6eee996056",
+          "size": 56780
+        },
+        "input-required-question": {
+          "file": "packs/cuckoo-clear/input-required-question.wav",
+          "sha256": "a8c78528e4bb301d6cf00980abff6ac10fb4fea714b9369dfcd99cc5d9730be7",
+          "size": 56780
+        },
+        "resource-limit": {
+          "file": "packs/cuckoo-clear/resource-limit.wav",
+          "sha256": "35fe0f3abb015635801727b3db13e879de39c3d6a19f82d3e02832301a702b1c",
+          "size": 66668
+        },
+        "user-spam": {
+          "file": "packs/cuckoo-clear/user-spam.wav",
+          "sha256": "fcc249e1f9b44e6164505ac1d1d1c9acae198de91d2bfad89c0f0f9901f8c263",
+          "size": 47660
+        },
+        "idle-reminder": {
+          "file": "packs/cuckoo-clear/idle-reminder.wav",
+          "sha256": "62a9706e68c8a7e783a4269a4825e3905e3092513775aa7d35a11ef6bc3db420",
+          "size": 63020
+        }
+      }
+    },
+    {
+      "id": "cuckoo-grove",
+      "name": "布谷·林间",
+      "englishName": "Grove cuckoo",
+      "description": "原创合成仿鸟鸣：较紧凑的布谷双音，稍厚的喉腔泛音与林间短反射。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/cuckoo-grove/session-start.wav",
+          "sha256": "e1f8323e4ffe197087c48f8403f70f0d8ae4401b26c268bf72a47e0d24dbbf94",
+          "size": 59206
+        },
+        "task-acknowledge": {
+          "file": "packs/cuckoo-grove/task-acknowledge.wav",
+          "sha256": "459e61633faee9675557c1a3ba6e8f6b3ef80599029b5f5a7179274577ea6da6",
+          "size": 40076
+        },
+        "task-complete": {
+          "file": "packs/cuckoo-grove/task-complete.wav",
+          "sha256": "b7968a9e209777e6ff3fcca8b1847737be82b97434f60b46e2a766c9b9abde30",
+          "size": 100178
+        },
+        "task-error": {
+          "file": "packs/cuckoo-grove/task-error.wav",
+          "sha256": "b24dd04ddfd390d6376a5c3929fdcc4b637ea27b982fc74ee3b8494611bbdde8",
+          "size": 69864
+        },
+        "input-required": {
+          "file": "packs/cuckoo-grove/input-required.wav",
+          "sha256": "8c28696c82891fc3a54508a2b8b0137e389743211dace91531e7af30b6755c68",
+          "size": 58944
+        },
+        "input-required-question": {
+          "file": "packs/cuckoo-grove/input-required-question.wav",
+          "sha256": "c54f26574b9505ddd27a32f3894b3b26adfbe30dd8a35a279de09678342bf928",
+          "size": 58944
+        },
+        "resource-limit": {
+          "file": "packs/cuckoo-grove/resource-limit.wav",
+          "sha256": "de3596c0ded6f510e4d6578bc7ef3423d29ebbe7f2a463e05dc67b8c6f9ad795",
+          "size": 67942
+        },
+        "user-spam": {
+          "file": "packs/cuckoo-grove/user-spam.wav",
+          "sha256": "e387ea6e0a6e473703e1e5315ea5b50120b036fbc8eee584514f21921334004a",
+          "size": 50646
+        },
+        "idle-reminder": {
+          "file": "packs/cuckoo-grove/idle-reminder.wav",
+          "sha256": "65ff497fe0a5c5476a62abc05d107226e2321326d9a43d546a38e08f45a1ccf9",
+          "size": 64624
+        }
+      }
+    },
+    {
+      "id": "cuckoo-mist",
+      "name": "布谷·晨雾",
+      "englishName": "Misty cuckoo",
+      "description": "原创合成仿鸟鸣：较低、较缓的布谷双呼，柔化高频与短余韵营造晨雾距离感。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/cuckoo-mist/session-start.wav",
+          "sha256": "03a83b0e02f6052d16909d03ca28d4f43c916221b86a430f6b898afd4b0cba02",
+          "size": 70776
+        },
+        "task-acknowledge": {
+          "file": "packs/cuckoo-mist/task-acknowledge.wav",
+          "sha256": "ec8edc3a359f5e8c9ec42ee3ded1f1d0a9eba98a7b5a5999b10f0efa6ad75e22",
+          "size": 47650
+        },
+        "task-complete": {
+          "file": "packs/cuckoo-mist/task-complete.wav",
+          "sha256": "777203eb4d3577dc772d77e39acb127c1cb2387e06ddaa93b22d9d67a248d6d5",
+          "size": 120304
+        },
+        "task-error": {
+          "file": "packs/cuckoo-mist/task-error.wav",
+          "sha256": "fcc92d5e6e9838354deb91f4fb709fa1a58340fb56c2c9b24072285a74550463",
+          "size": 83660
+        },
+        "input-required": {
+          "file": "packs/cuckoo-mist/input-required.wav",
+          "sha256": "58fbc55c955fccbb500f3cbb263aeb0f935c23fafca57777f09c2dcc44cd1b5a",
+          "size": 70460
+        },
+        "input-required-question": {
+          "file": "packs/cuckoo-mist/input-required-question.wav",
+          "sha256": "7061cdd84c7fe04bfaa856a4a63d33669c2b040e8c192e1aadfd41e6566fcaa6",
+          "size": 70460
+        },
+        "resource-limit": {
+          "file": "packs/cuckoo-mist/resource-limit.wav",
+          "sha256": "6bc79ed35081293e0d65fca518b50d195fd80ad9932a762df81684c60ff03cfb",
+          "size": 81336
+        },
+        "user-spam": {
+          "file": "packs/cuckoo-mist/user-spam.wav",
+          "sha256": "110b2c63d59a0f21a1c015b9e7e365743ec4a45a93d4470cb6ae1ddffe4ab070",
+          "size": 60428
+        },
+        "idle-reminder": {
+          "file": "packs/cuckoo-mist/idle-reminder.wav",
+          "sha256": "699b3533b6d749071ad70f54edb50ee21f73aa9f4718d18f21f407206e115fa2",
+          "size": 77324
+        }
+      }
+    },
+    {
+      "id": "dove",
+      "name": "斑鸠·低吟",
+      "englishName": "Gentle dove",
+      "description": "原创合成仿鸟鸣：低柔的 coo 声腔、缓起音与轻喉颤，适合安静工作提示。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/dove/session-start.wav",
+          "sha256": "2a5945ef39abd64fbae08dc81b76a02c208642c60a48dd78605125798a8a0971",
+          "size": 72716
+        },
+        "task-acknowledge": {
+          "file": "packs/dove/task-acknowledge.wav",
+          "sha256": "fdaf76432cb3c68290aa05794cc4d336fd6d371d8c6eca4737e290314c1b2b6e",
+          "size": 32396
+        },
+        "task-complete": {
+          "file": "packs/dove/task-complete.wav",
+          "sha256": "c30d5b825efcaaef27398822534b1e29eea4738c3d18908789e3d758c3d99366",
+          "size": 93836
+        },
+        "task-error": {
+          "file": "packs/dove/task-error.wav",
+          "sha256": "99126865e927d1b391e7f27851d872ae7853098b15d0dcef1a2f45767433f707",
+          "size": 58316
+        },
+        "input-required": {
+          "file": "packs/dove/input-required.wav",
+          "sha256": "7ef04056d2099aa31ecfef4a49f315ef9f9da0991f81a26b8e7adc6641b8c164",
+          "size": 69836
+        },
+        "input-required-question": {
+          "file": "packs/dove/input-required-question.wav",
+          "sha256": "96a3fb6c58d7fb9b845f64dbaa516d0e3dcfaca5cb64d664d5d40206885020d6",
+          "size": 66956
+        },
+        "resource-limit": {
+          "file": "packs/dove/resource-limit.wav",
+          "sha256": "7e6d6777a0b88425b0a6bd6fa212ccd9d4c1c7b21f75f165c8d77e0740764a0b",
+          "size": 47756
+        },
+        "user-spam": {
+          "file": "packs/dove/user-spam.wav",
+          "sha256": "a4cd0280048fc4b3a1a620219f82d42cf7ca3a987d31b82949ab0524755781e4",
+          "size": 53516
+        },
+        "idle-reminder": {
+          "file": "packs/dove/idle-reminder.wav",
+          "sha256": "b77ec7739d508f90f85c5ef88e854b339efee518edf5006d19a4413cf98396af",
+          "size": 51596
+        }
+      }
+    },
+    {
+      "id": "feather",
+      "name": "鸾羽",
+      "englishName": "Feather",
+      "description": "温润的合成鸟鸣、轻气息与中频共鸣；用滑音方向和短句节奏区分事件。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/feather/session-start.wav",
+          "sha256": "1c5c1f6c60b386699c91fdd12b79906aa2c7f5bde5495a2fa67ec26344fa22b8",
+          "size": 63404
+        },
+        "task-acknowledge": {
+          "file": "packs/feather/task-acknowledge.wav",
+          "sha256": "3adf8afdec5d28476f27c593a08d95a763fb901c4fd960e1ddccf172ad7ffe96",
+          "size": 21164
+        },
+        "task-complete": {
+          "file": "packs/feather/task-complete.wav",
+          "sha256": "5ca5b2372e8e056b684d5c09018759b92baf4969b9af80d01921e223a0c2b556",
+          "size": 67244
+        },
+        "task-error": {
+          "file": "packs/feather/task-error.wav",
+          "sha256": "149c9315b1e5f6289250b5be74ad91199b084f1e240b4df70c476796fdd26f39",
+          "size": 41324
+        },
+        "input-required": {
+          "file": "packs/feather/input-required.wav",
+          "sha256": "2c4556e19ffbd56e7cbadbf562d243dff1a79626280afb358bb2b5f11a828799",
+          "size": 47084
+        },
+        "input-required-question": {
+          "file": "packs/feather/input-required-question.wav",
+          "sha256": "3f18f70a607ff820562f33d37ef1ab0d4975585d5fd8d140108c655497df8cf4",
+          "size": 41324
+        },
+        "resource-limit": {
+          "file": "packs/feather/resource-limit.wav",
+          "sha256": "87f7edc7af4f49a170acd003cd01ccf4f0420c4754f28c700948fdf665a8f4f2",
+          "size": 49964
+        },
+        "user-spam": {
+          "file": "packs/feather/user-spam.wav",
+          "sha256": "92bf0b747e6d64b29b7942f871bf1c2c13db2e51146684b118ae5a06fa8fab76",
+          "size": 33644
+        },
+        "idle-reminder": {
+          "file": "packs/feather/idle-reminder.wav",
+          "sha256": "987aacca5ed213dd73061699bd4b82858f4133cdbc550eeaff689b5d1870c9d9",
+          "size": 55724
+        }
+      }
+    },
+    {
+      "id": "felt",
+      "name": "毡音",
+      "englishName": "Felt",
+      "description": "柔软毡槌的温暖圆音，缓起而不拖沓。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/felt/session-start.wav",
+          "sha256": "8b9a2cfa6aa023287aee6d60302578cab73ed1f162e759b54c440a29b491239a",
+          "size": 44204
+        },
+        "task-acknowledge": {
+          "file": "packs/felt/task-acknowledge.wav",
+          "sha256": "511278db05cc8edcadd3d7e55f4719ba9f3f82a9ad081df5bd845cec3f8fa105",
+          "size": 28844
+        },
+        "task-complete": {
+          "file": "packs/felt/task-complete.wav",
+          "sha256": "751125c8a551420814cbe4038076ac124367ed24ef10cddc8f4a15b35c34c815",
+          "size": 51884
+        },
+        "task-error": {
+          "file": "packs/felt/task-error.wav",
+          "sha256": "71ed43890fdc5e7303054e9b023f664863114ad30db130c4514a910d165f23ff",
+          "size": 45164
+        },
+        "input-required": {
+          "file": "packs/felt/input-required.wav",
+          "sha256": "392c44ab1230a37cb09b82ce39291ccee5f2b05ed0002a5f187a762093784e43",
+          "size": 52844
+        },
+        "input-required-question": {
+          "file": "packs/felt/input-required-question.wav",
+          "sha256": "1272886a769a59a78eb1921bb20b2085b4cb05eda9fd6f47c4bb20ce1f4a71d8",
+          "size": 50924
+        },
+        "resource-limit": {
+          "file": "packs/felt/resource-limit.wav",
+          "sha256": "9916f101b73905a590d2aff2c845f97fbf202b7ffdf4c433788fa1261cf90cfd",
+          "size": 53804
+        },
+        "user-spam": {
+          "file": "packs/felt/user-spam.wav",
+          "sha256": "80c3b45e8d68997f2fc398fc8bd71b9b8ed06113e9e8ed31495eeb352995e9f1",
+          "size": 42764
+        },
+        "idle-reminder": {
+          "file": "packs/felt/idle-reminder.wav",
+          "sha256": "bad53b76440a83ebf5fbc101b866314264269d5f3238ce428d98cabf4f2c4735",
+          "size": 28844
+        }
+      }
+    },
+    {
+      "id": "fmkeys",
+      "name": "数码琴",
+      "englishName": "FM Keys",
+      "description": "带一点玻璃质感的电子琴键，清亮收束。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/fmkeys/session-start.wav",
+          "sha256": "08a32d114cc98ec6e124bde92102d49e6ac932641072e33f535056d27d5d1ed8",
+          "size": 49004
+        },
+        "task-acknowledge": {
+          "file": "packs/fmkeys/task-acknowledge.wav",
+          "sha256": "db71eff6428dc9f0fc55fa26c940056d090b793bf262bfa0ce6ae2fd45ca3ef8",
+          "size": 22124
+        },
+        "task-complete": {
+          "file": "packs/fmkeys/task-complete.wav",
+          "sha256": "0c78f3170d74691e814751579601e23a4c27598a3a2c62647bd808eaccf7fd87",
+          "size": 61484
+        },
+        "task-error": {
+          "file": "packs/fmkeys/task-error.wav",
+          "sha256": "0129dcecedeeb42e683150faa1016b4d03c19ac0531eaec0e75dea204800d799",
+          "size": 41324
+        },
+        "input-required": {
+          "file": "packs/fmkeys/input-required.wav",
+          "sha256": "23bb3365e10701352c4c05e4af13b4a15f0217122c229e23d8b7f889f2511ff9",
+          "size": 43244
+        },
+        "input-required-question": {
+          "file": "packs/fmkeys/input-required-question.wav",
+          "sha256": "ea11c03bbb5b8d03394fc3d35f02732d6739f027e3d29647414fe0cb761f78d2",
+          "size": 51884
+        },
+        "resource-limit": {
+          "file": "packs/fmkeys/resource-limit.wav",
+          "sha256": "edfd9b9e3814ac49d09f01b2f189911c6163f950890017f9953210487ae286e4",
+          "size": 46124
+        },
+        "user-spam": {
+          "file": "packs/fmkeys/user-spam.wav",
+          "sha256": "85c9e1870ba5e173bc132de5cba6eab542d0d29e983793737ba6088f0e765ef1",
+          "size": 27884
+        },
+        "idle-reminder": {
+          "file": "packs/fmkeys/idle-reminder.wav",
+          "sha256": "50db3d13c12f961e430f0149b37bcd5231204eed07fcd391f7f46a9e3aadc896",
+          "size": 60524
+        }
+      }
+    },
+    {
+      "id": "kalimba",
+      "name": "拇指琴",
+      "englishName": "Kalimba",
+      "description": "短拨片和温暖簧片，保留轻微木腔感。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/kalimba/session-start.wav",
+          "sha256": "ce432e46ee1c0cd214d23fdd1a4a02b94d1b770439bb3afbb10b4494bfc0b279",
+          "size": 38924
+        },
+        "task-acknowledge": {
+          "file": "packs/kalimba/task-acknowledge.wav",
+          "sha256": "a34757322c9e20ab0fc0fe03278d947fce37e4f273a165f1fc3f2810610a68bf",
+          "size": 30764
+        },
+        "task-complete": {
+          "file": "packs/kalimba/task-complete.wav",
+          "sha256": "9b304a32f95b79d3113d844229cd888cdc9a19fb19483ce214e06f30c835d0b9",
+          "size": 50924
+        },
+        "task-error": {
+          "file": "packs/kalimba/task-error.wav",
+          "sha256": "4cfb6e208df19e446bc69f8958432e38209c0b0781568c17756122417edf87e1",
+          "size": 44684
+        },
+        "input-required": {
+          "file": "packs/kalimba/input-required.wav",
+          "sha256": "4e24411124604d5e97886d3d96783f278ac61494fc62b4f3f8353c7bb5779325",
+          "size": 50444
+        },
+        "input-required-question": {
+          "file": "packs/kalimba/input-required-question.wav",
+          "sha256": "054967f2f4434e4bd85984a44bf910e8f348b6a44625ee8936ca57968586b1a0",
+          "size": 47084
+        },
+        "resource-limit": {
+          "file": "packs/kalimba/resource-limit.wav",
+          "sha256": "d2b000d591fdb8923771b9a3bdcb70fbe801a58e7a9e0a6a50eae06c3589fad6",
+          "size": 53804
+        },
+        "user-spam": {
+          "file": "packs/kalimba/user-spam.wav",
+          "sha256": "a37355025d2e310a733a2abbae5df0978e8335062ede962789a626a09f745daa",
+          "size": 39404
+        },
+        "idle-reminder": {
+          "file": "packs/kalimba/idle-reminder.wav",
+          "sha256": "d22e5b011e7b1b3d6215e59ae7e250b8304dcdd6d1ffe4394616f5a4eb2b9440",
+          "size": 54764
+        }
+      }
+    },
+    {
+      "id": "marimba",
+      "name": "木琴",
+      "englishName": "Marimba",
+      "description": "温暖谐波木条与柔槌滚奏。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/marimba/session-start.wav",
+          "sha256": "51338a68cf9bfbd41d5a88828fd268f7cd13edb48109425c80143183220dba1e",
+          "size": 46124
+        },
+        "task-acknowledge": {
+          "file": "packs/marimba/task-acknowledge.wav",
+          "sha256": "2efdabd98e643f1204f764a15b82f5dfc3a000f103af0bc4730966ff5a7e8fd4",
+          "size": 15404
+        },
+        "task-complete": {
+          "file": "packs/marimba/task-complete.wav",
+          "sha256": "334120db74d399a79fee4e2a960ba7562254ec52c170e6c73a2adf82f68ae891",
+          "size": 57644
+        },
+        "task-error": {
+          "file": "packs/marimba/task-error.wav",
+          "sha256": "e5bd0246638dde9d45bf4b52322e637e90fbf0674a03ae7e38edc4747b6ebc04",
+          "size": 30764
+        },
+        "input-required": {
+          "file": "packs/marimba/input-required.wav",
+          "sha256": "960da8d54d3e4067ec1de38dcbae8e0bce62ab6961ea047528cda7a2fa25d81f",
+          "size": 40364
+        },
+        "input-required-question": {
+          "file": "packs/marimba/input-required-question.wav",
+          "sha256": "196c4f91ae49f75e777ce1895b195e8f83459de3b287a2e81b3ae739e5e1f065",
+          "size": 44204
+        },
+        "resource-limit": {
+          "file": "packs/marimba/resource-limit.wav",
+          "sha256": "b8d473c5ca51325c3ac3b98b10991566f44fd41b3657075ec359108c22137da0",
+          "size": 34604
+        },
+        "user-spam": {
+          "file": "packs/marimba/user-spam.wav",
+          "sha256": "6b25c2a7c541d46f64ff0a59e30558d0b846cf93c4fea7304b96f9b4446fa475",
+          "size": 18284
+        },
+        "idle-reminder": {
+          "file": "packs/marimba/idle-reminder.wav",
+          "sha256": "64a19ea483aefcae8d5c3ffd6e7f990fd2ae126785bb188d78e7ed748913c42e",
+          "size": 52844
+        }
+      }
+    },
+    {
+      "id": "neon",
+      "name": "霓虹",
+      "englishName": "Neon",
+      "description": "明快利落的电子拨音，带一点跳跃的光泽。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/neon/session-start.wav",
+          "sha256": "2e4a39aff9a0a6321fc7146d50e0bac5da9532e6159b1b8b2e247bb2efe94778",
+          "size": 37484
+        },
+        "task-acknowledge": {
+          "file": "packs/neon/task-acknowledge.wav",
+          "sha256": "efcfbe7926b781d0af724d6db4fc5983753fb6c050a238f605118bd2f28b3ac0",
+          "size": 15404
+        },
+        "task-complete": {
+          "file": "packs/neon/task-complete.wav",
+          "sha256": "e05a7f17fa577ec0be6e8ae7817eed557f80cf0d9ac0b769216c2772ce6bd823",
+          "size": 49004
+        },
+        "task-error": {
+          "file": "packs/neon/task-error.wav",
+          "sha256": "6176db8a21bceaba01d824c747b4c2640aaf48a59deac2cd0e4d3adee2beb363",
+          "size": 30764
+        },
+        "input-required": {
+          "file": "packs/neon/input-required.wav",
+          "sha256": "417d29641268402da75c0a1bef985dfda19e035c5ddd45dc1528a1e4f1677604",
+          "size": 33644
+        },
+        "input-required-question": {
+          "file": "packs/neon/input-required-question.wav",
+          "sha256": "7eb2a05ecfeea858392f7c7012491392e678a4ab03368e8d49db289588769c0e",
+          "size": 42284
+        },
+        "resource-limit": {
+          "file": "packs/neon/resource-limit.wav",
+          "sha256": "a269793ca98ff7753af90594ef35237d50c809ed4cdd6d8b941ccc09eb5941b4",
+          "size": 40364
+        },
+        "user-spam": {
+          "file": "packs/neon/user-spam.wav",
+          "sha256": "ece542f84f10bd42b824cdeeb2d1d7c145c6dcaf18e4749b9c3374f2da5af121",
+          "size": 22124
+        },
+        "idle-reminder": {
+          "file": "packs/neon/idle-reminder.wav",
+          "sha256": "151cccb8aceac2a0ad1b80ddbfd8653e4446ef267cf1e7e8d2f75dacf6890dba",
+          "size": 48044
+        }
+      }
+    },
+    {
+      "id": "orbit",
+      "name": "星环",
+      "englishName": "Orbit",
+      "description": "圆润电子脉冲与短暂空间共鸣。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/orbit/session-start.wav",
+          "sha256": "1438a3c14a6d5763c04be1549d14fc665028273559dc2730c4457dc6a441d6da",
+          "size": 55724
+        },
+        "task-acknowledge": {
+          "file": "packs/orbit/task-acknowledge.wav",
+          "sha256": "6ac342bba57f5e6973c094e1ebeab9fb7937fa6f42283cc13784ba596e0aa27d",
+          "size": 18284
+        },
+        "task-complete": {
+          "file": "packs/orbit/task-complete.wav",
+          "sha256": "0dda348bafb6924e035969a705f1e80c36593385873a88580dbf68e0cc601f0c",
+          "size": 58604
+        },
+        "task-error": {
+          "file": "packs/orbit/task-error.wav",
+          "sha256": "eb962004c72f82ba3a1b86ee7655e2b7c112ad417bd090b7bec2998f13910301",
+          "size": 37484
+        },
+        "input-required": {
+          "file": "packs/orbit/input-required.wav",
+          "sha256": "3096234dcd4a80df8074e7fe978812089074cfff4cbc0a3811060943818e5ac9",
+          "size": 48044
+        },
+        "input-required-question": {
+          "file": "packs/orbit/input-required-question.wav",
+          "sha256": "ceda5a44e98527909067e0c1904d511616567e8e6c36bbb1045d3450f529f333",
+          "size": 49964
+        },
+        "resource-limit": {
+          "file": "packs/orbit/resource-limit.wav",
+          "sha256": "23942c15939ee12d0111d816cba200c67e8e24dc96da5b1992a6a8173ec22315",
+          "size": 44204
+        },
+        "user-spam": {
+          "file": "packs/orbit/user-spam.wav",
+          "sha256": "1fdb87609513786ff3647cbce9caded37d05048308b8ac877b8a532ad767e0ad",
+          "size": 23084
+        },
+        "idle-reminder": {
+          "file": "packs/orbit/idle-reminder.wav",
+          "sha256": "4933ae38d96353f4ed1a210442a03108c029202f22b47857cb13b437e242b346",
+          "size": 63404
+        }
+      }
+    },
+    {
+      "id": "paper",
+      "name": "纸间",
+      "englishName": "Paper",
+      "description": "折纸与翻页般的颗粒，少量低音托住短促摩擦。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/paper/session-start.wav",
+          "sha256": "ecc770b7774c3469c8a63e4299ad7ab561522a0df158630cc97baacb1128da04",
+          "size": 20204
+        },
+        "task-acknowledge": {
+          "file": "packs/paper/task-acknowledge.wav",
+          "sha256": "bbf80f08b7c2efad2152eaaed0e8f08ed07c7ba73b83d8ddd0f6bfba624a215d",
+          "size": 13484
+        },
+        "task-complete": {
+          "file": "packs/paper/task-complete.wav",
+          "sha256": "ba54afe127859cfc391c82d430b5536b4012cad680e4cbbfe0d0b128d565b3fe",
+          "size": 25964
+        },
+        "task-error": {
+          "file": "packs/paper/task-error.wav",
+          "sha256": "034920e00f25b82754f7e39153a14d841c91028b9c35c3482e0ab5b900d968b9",
+          "size": 28364
+        },
+        "input-required": {
+          "file": "packs/paper/input-required.wav",
+          "sha256": "0784b2302c4e57e2da0f3e75c8b3536913b76798212cbe018cd0264bd58e6cb7",
+          "size": 34604
+        },
+        "input-required-question": {
+          "file": "packs/paper/input-required-question.wav",
+          "sha256": "561ec4c09f0da5e3dfd2be9b5d4d2250aea3eb031aee03f6236da5a50ed983f4",
+          "size": 35564
+        },
+        "resource-limit": {
+          "file": "packs/paper/resource-limit.wav",
+          "sha256": "aa9c5e6011f885acc6c6db92952a730f4e5081ffeb16e418eb09fab835149625",
+          "size": 36524
+        },
+        "user-spam": {
+          "file": "packs/paper/user-spam.wav",
+          "sha256": "d91a091e5b473ff930dca8278b94017f51c121969e59720e8adb81c15361ddb2",
+          "size": 25964
+        },
+        "idle-reminder": {
+          "file": "packs/paper/idle-reminder.wav",
+          "sha256": "94c83de93638ec6c6179eb18b4c06d30442a8e730a0dc23a227ab6410de002a2",
+          "size": 13484
+        }
+      }
+    },
+    {
+      "id": "pebble",
+      "name": "卵石",
+      "englishName": "Pebble",
+      "description": "短促干燥的石击与轻回弹。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/pebble/session-start.wav",
+          "sha256": "f6d8ae39bb5a971580de5662b12ea868e1362ff5e547b10ac8ef8faac200426d",
+          "size": 33644
+        },
+        "task-acknowledge": {
+          "file": "packs/pebble/task-acknowledge.wav",
+          "sha256": "e9d97e4d42e808d79b910533a70be5cb4e901bef0ebcf6133c2de69c1bae3dd2",
+          "size": 11564
+        },
+        "task-complete": {
+          "file": "packs/pebble/task-complete.wav",
+          "sha256": "36297d4c56e3b0b8143c89c8413320cdd4bbbbc7bcacce43322c53ef8af05851",
+          "size": 40364
+        },
+        "task-error": {
+          "file": "packs/pebble/task-error.wav",
+          "sha256": "b4461197dd380f6c793f471ebc058f14846b32abd649a2bb2aa5bec5dab10616",
+          "size": 26924
+        },
+        "input-required": {
+          "file": "packs/pebble/input-required.wav",
+          "sha256": "16ceb4064650368faddd76fc3c532c99f2126084f5dbeefb509eaf2e5f9b2fb6",
+          "size": 34604
+        },
+        "input-required-question": {
+          "file": "packs/pebble/input-required-question.wav",
+          "sha256": "8398e73a8e444aed9d1740f822f2ed4cffaf46f3dc2261745151b62288d86390",
+          "size": 35564
+        },
+        "resource-limit": {
+          "file": "packs/pebble/resource-limit.wav",
+          "sha256": "520e5c9959d8b4846b3c0e919d30ad244688373824d92d3e49f48c27b988e427",
+          "size": 31724
+        },
+        "user-spam": {
+          "file": "packs/pebble/user-spam.wav",
+          "sha256": "f2752d19b8ea715bf1787978f6121185cfb2b64640212b158a26fdcb093c45f1",
+          "size": 16364
+        },
+        "idle-reminder": {
+          "file": "packs/pebble/idle-reminder.wav",
+          "sha256": "5b875e7cd798f77a662cfa84b5836e50db65b9fc499a5b518902bf3eba80b779",
+          "size": 34604
+        }
+      }
+    },
+    {
+      "id": "plucked",
+      "name": "弦语",
+      "englishName": "Plucked",
+      "description": "细密拨弦泛音与指腹止音。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/plucked/session-start.wav",
+          "sha256": "dcfa7dcee5d034747283e1f2f391110823cb173f24de327486f8b801640a8aaf",
+          "size": 47084
+        },
+        "task-acknowledge": {
+          "file": "packs/plucked/task-acknowledge.wav",
+          "sha256": "3ef734e922cbd4a30027a70f376b0d398e7249e0f43bb6939f2184a808a5916a",
+          "size": 16364
+        },
+        "task-complete": {
+          "file": "packs/plucked/task-complete.wav",
+          "sha256": "96bbac0059f38a16e9bc23eaf85796f80066531eff25682403121ad49be9efcb",
+          "size": 61484
+        },
+        "task-error": {
+          "file": "packs/plucked/task-error.wav",
+          "sha256": "716aed0185c4cf95d7f5571fa2b9cf37de6532c7fe633845d0bd743dc237951a",
+          "size": 33644
+        },
+        "input-required": {
+          "file": "packs/plucked/input-required.wav",
+          "sha256": "835c9c16c3502de30de1b5cc7d9f7811895923f3b910d315ba0787757f7456ab",
+          "size": 44204
+        },
+        "input-required-question": {
+          "file": "packs/plucked/input-required-question.wav",
+          "sha256": "2015e44aa435c4c02e8a2fa1ee5bdda0cc8ba9f65d029e91b10f968d0658536d",
+          "size": 48044
+        },
+        "resource-limit": {
+          "file": "packs/plucked/resource-limit.wav",
+          "sha256": "4f4b75675a2f9e8197ffb61975f452ede30502d5cf14704a35c0b25ce9550dbe",
+          "size": 36524
+        },
+        "user-spam": {
+          "file": "packs/plucked/user-spam.wav",
+          "sha256": "25186c78a30643f8b18c63873e2233986e9a1a30a586346bed7c383fe3445f00",
+          "size": 19244
+        },
+        "idle-reminder": {
+          "file": "packs/plucked/idle-reminder.wav",
+          "sha256": "c63c43c066f36e4496753204ad97903c82519da0cc0ddcf0f71b0c43a658980d",
+          "size": 55724
+        }
+      }
+    },
+    {
+      "id": "porcelain",
+      "name": "瓷响",
+      "englishName": "Porcelain",
+      "description": "清透柔和的瓷质共鸣与轻敲。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/porcelain/session-start.wav",
+          "sha256": "e07514b67747c3492b0599512a4503fa30ebe48f085d3c7625853e74f9d6c744",
+          "size": 52844
+        },
+        "task-acknowledge": {
+          "file": "packs/porcelain/task-acknowledge.wav",
+          "sha256": "004c34dd567699a4b9d3e34f50c6c579199ad90c7239b534ea44943450d8ea65",
+          "size": 16364
+        },
+        "task-complete": {
+          "file": "packs/porcelain/task-complete.wav",
+          "sha256": "2e50047da80d87ea0bcf84e2dfe68c0e9a87441d36f55eff843de0ffd2045d9a",
+          "size": 53804
+        },
+        "task-error": {
+          "file": "packs/porcelain/task-error.wav",
+          "sha256": "5aedc8f30a1fd03fb23f36ce9a468dee9f496b51b897e18161016f94f33f9a8d",
+          "size": 32684
+        },
+        "input-required": {
+          "file": "packs/porcelain/input-required.wav",
+          "sha256": "daa78e23af3753d96673fb92bfecc3f30d40f427205435f65bc7049675613016",
+          "size": 42284
+        },
+        "input-required-question": {
+          "file": "packs/porcelain/input-required-question.wav",
+          "sha256": "ec9031c48947d278945a234f642f786ec12ea495b2da7fb2bf81a04079065501",
+          "size": 44204
+        },
+        "resource-limit": {
+          "file": "packs/porcelain/resource-limit.wav",
+          "sha256": "1652f0f281bf0948c6044eefcd87282ec45b021800054e6de1a871c87eb31b28",
+          "size": 41324
+        },
+        "user-spam": {
+          "file": "packs/porcelain/user-spam.wav",
+          "sha256": "02dea1d460f3ed907e16fd3f944c05f9092f6ad983a57c56201b000ac248b304",
+          "size": 21164
+        },
+        "idle-reminder": {
+          "file": "packs/porcelain/idle-reminder.wav",
+          "sha256": "5eeaa5776b171417491ac7f74ae0299fca3788c6a036ba48b6e14071c3bc6789",
+          "size": 57644
+        }
+      }
+    },
+    {
+      "id": "raindrop",
+      "name": "雨滴",
+      "englishName": "Raindrop",
+      "description": "圆润水珠落下，带短暂滑音与细小水纹。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/raindrop/session-start.wav",
+          "sha256": "b5bc77f5215237295436e3a1e8f39b69e2abd55906035b36377b4aee50f50827",
+          "size": 36524
+        },
+        "task-acknowledge": {
+          "file": "packs/raindrop/task-acknowledge.wav",
+          "sha256": "30ee3a4c90c755876eae62deeb5a7eee0b6680588e62907daa11f20f63083c0a",
+          "size": 23084
+        },
+        "task-complete": {
+          "file": "packs/raindrop/task-complete.wav",
+          "sha256": "fd618ecc7b8cc51fcd1bfb0515e02068ccc54eef212dbb0d84a1b41b06d9672d",
+          "size": 35564
+        },
+        "task-error": {
+          "file": "packs/raindrop/task-error.wav",
+          "sha256": "475cd5e9b065e8607cf39ff99a5a4701cb7cfb9dc798f59351386cdc1a563d35",
+          "size": 38444
+        },
+        "input-required": {
+          "file": "packs/raindrop/input-required.wav",
+          "sha256": "63fb562bba8ac8db75eab02790dae8bb2d176f80ada57a1cfa5c2083d8c2b5fd",
+          "size": 47084
+        },
+        "input-required-question": {
+          "file": "packs/raindrop/input-required-question.wav",
+          "sha256": "41d68b7c9c805b0a6279d1de56f73f6f345aea977e410d9d88704652bbdabbc7",
+          "size": 41324
+        },
+        "resource-limit": {
+          "file": "packs/raindrop/resource-limit.wav",
+          "sha256": "2f77f20b08535687506f922f51ecaf31575c7f31084562ab202668df7226aa74",
+          "size": 46124
+        },
+        "user-spam": {
+          "file": "packs/raindrop/user-spam.wav",
+          "sha256": "ba4004fc994c0aaeadd9b9645898af85114df3946a3c2611cdc7e2ea736ca885",
+          "size": 34124
+        },
+        "idle-reminder": {
+          "file": "packs/raindrop/idle-reminder.wav",
+          "sha256": "fc35d793e619af911dbb304208c6dd909dd733b0a5d44dd17b54999af7d98458",
+          "size": 23084
+        }
+      }
+    },
+    {
+      "id": "satellite",
+      "name": "卫星",
+      "englishName": "Satellite",
+      "description": "有距离感的空灵点声，留下轻轻的回响。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/satellite/session-start.wav",
+          "sha256": "7b9c669c10c00263d790138be7571c47ef078d78543d16c537532deb8d016bfb",
+          "size": 55724
+        },
+        "task-acknowledge": {
+          "file": "packs/satellite/task-acknowledge.wav",
+          "sha256": "f7234daf89c5901d9777a2bb4b38f535c93304a02a79a67f313ee985fb9cdb01",
+          "size": 31724
+        },
+        "task-complete": {
+          "file": "packs/satellite/task-complete.wav",
+          "sha256": "da3003ed1ad03243579ed3d440b8b4e5c4e44c0728fec1319756ef46e3699dc9",
+          "size": 63404
+        },
+        "task-error": {
+          "file": "packs/satellite/task-error.wav",
+          "sha256": "d0bf1cf0eec2da57f1e48efc3f01b95254587eb2e7f55b74c9c8d2fb5124effe",
+          "size": 48044
+        },
+        "input-required": {
+          "file": "packs/satellite/input-required.wav",
+          "sha256": "9c1e66660f3d886d39c5539ffa401def518ecb9dffe8cbf4d3970ac5174ffd66",
+          "size": 56684
+        },
+        "input-required-question": {
+          "file": "packs/satellite/input-required-question.wav",
+          "sha256": "5a52a50c19818558538081f2d213b9e9f44def9988e842cecf23ec8b818c4729",
+          "size": 61484
+        },
+        "resource-limit": {
+          "file": "packs/satellite/resource-limit.wav",
+          "sha256": "b458f80901b5ab2dc724ebc4c2f5db56c593e3a07b3c24f45c1480f09b89bbd9",
+          "size": 51884
+        },
+        "user-spam": {
+          "file": "packs/satellite/user-spam.wav",
+          "sha256": "773a2af330b402d2c38654c87cfa45da4e8d8fc7c8aa02910d59229736134785",
+          "size": 38444
+        },
+        "idle-reminder": {
+          "file": "packs/satellite/idle-reminder.wav",
+          "sha256": "f81bf3fbf17e7b00f9a939f99c1256401cd99ab61cdab3c25a923e38cefb1a1d",
+          "size": 62444
+        }
+      }
+    },
+    {
+      "id": "telemetry",
+      "name": "遥测",
+      "englishName": "Telemetry",
+      "description": "疏落的电子点声，像安静仪表上的小小回应。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/telemetry/session-start.wav",
+          "sha256": "793f9cdfbceeefde2da3b9a1dc19bb2664a99a08abf4deed43216d1084d4c087",
+          "size": 39404
+        },
+        "task-acknowledge": {
+          "file": "packs/telemetry/task-acknowledge.wav",
+          "sha256": "ced097fffecefeee5312c2509a2f5b84badd5c3afc3122242cc4693b43210773",
+          "size": 10124
+        },
+        "task-complete": {
+          "file": "packs/telemetry/task-complete.wav",
+          "sha256": "b38ceada4a6ab53ce7e0a2b8362330d0fe95fcf40caddd413a103777f63d1c6d",
+          "size": 41324
+        },
+        "task-error": {
+          "file": "packs/telemetry/task-error.wav",
+          "sha256": "ce24255b156aa3192936256b87a5dff726a42f56c5e030c61e985a280d9b8cb6",
+          "size": 27884
+        },
+        "input-required": {
+          "file": "packs/telemetry/input-required.wav",
+          "sha256": "a3faecdde675dcb27e5c936b3b2d52b1de8467b06aaecd6606e4837b26eda0af",
+          "size": 35564
+        },
+        "input-required-question": {
+          "file": "packs/telemetry/input-required-question.wav",
+          "sha256": "9c03a16b81be86e9ceddba46a4f797aa6b2960d7843703340042471ffc21859e",
+          "size": 35564
+        },
+        "resource-limit": {
+          "file": "packs/telemetry/resource-limit.wav",
+          "sha256": "5e995de6b156aac26fba17b950ed115becefa2c866c38a53c698a871ebce274a",
+          "size": 38444
+        },
+        "user-spam": {
+          "file": "packs/telemetry/user-spam.wav",
+          "sha256": "487c3002814a960f2f1867cd81d5da8530d628c1c29891801f2ca7332d75e22a",
+          "size": 18284
+        },
+        "idle-reminder": {
+          "file": "packs/telemetry/idle-reminder.wav",
+          "sha256": "e0afbfed245d789bd5bbb95a2f94ea47aa490fd16fc7051f1c292360945af333",
+          "size": 47084
+        }
+      }
+    },
+    {
+      "id": "velvet",
+      "name": "丝绒",
+      "englishName": "Velvet",
+      "description": "柔软圆润的短和声，适合不想被打断的时候。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/velvet/session-start.wav",
+          "sha256": "fb5f52e423cb09ce73527b688b40d5aef29537d15af68f55345f12f25f7e8865",
+          "size": 58604
+        },
+        "task-acknowledge": {
+          "file": "packs/velvet/task-acknowledge.wav",
+          "sha256": "15dcca1e17cc1b5c7ed07b14af65cb9b7bd009d91c8b90f790aca7f357123619",
+          "size": 32684
+        },
+        "task-complete": {
+          "file": "packs/velvet/task-complete.wav",
+          "sha256": "1d4e1baaedf5a8664215023a6bfdb5d183c79b2912448bbbcff01992cc253b63",
+          "size": 70124
+        },
+        "task-error": {
+          "file": "packs/velvet/task-error.wav",
+          "sha256": "fa3c83315a4ed86185a1cfdd065d6a7c0c871e14f39c300fc5814835865af6ce",
+          "size": 51884
+        },
+        "input-required": {
+          "file": "packs/velvet/input-required.wav",
+          "sha256": "cbd003d4f44a8a7ccfe47d0433942cb41dfeb52b04ced7bf5e8cf8483ca484bc",
+          "size": 56684
+        },
+        "input-required-question": {
+          "file": "packs/velvet/input-required-question.wav",
+          "sha256": "83c53e69255f964fd818530925b9aa5168482c228b5b58d2b5959160c4e66e9a",
+          "size": 63404
+        },
+        "resource-limit": {
+          "file": "packs/velvet/resource-limit.wav",
+          "sha256": "c92664be4ba7d9ac62d4c646ba3c722b96e11b94e4aab7ca46f9723b3a3ee9a7",
+          "size": 54764
+        },
+        "user-spam": {
+          "file": "packs/velvet/user-spam.wav",
+          "sha256": "fc41ba51ca36864ac8f3c5eec933b6c1494621a9b80f5d8ad622d1a38824ba29",
+          "size": 34604
+        },
+        "idle-reminder": {
+          "file": "packs/velvet/idle-reminder.wav",
+          "sha256": "feb4c947cea82e3aaa5fffadda6f2822dfe30446b3154c43b93c48bb2925981e",
+          "size": 69164
+        }
+      }
+    },
+    {
+      "id": "warbler",
+      "name": "柳莺·轻啭",
+      "englishName": "Willow warbler",
+      "description": "原创合成仿鸟鸣：短而柔的曲线轻啭，用克制的颤动表达柳莺意象。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/warbler/session-start.wav",
+          "sha256": "bf1ae77d9886787c1490afb44938732acd52031ae460c1445cb7b62eb8884028",
+          "size": 57932
+        },
+        "task-acknowledge": {
+          "file": "packs/warbler/task-acknowledge.wav",
+          "sha256": "88af1d7f195031f8f2a91a505c374a75b8e6189d4a92600e2cccd1f899d19577",
+          "size": 21932
+        },
+        "task-complete": {
+          "file": "packs/warbler/task-complete.wav",
+          "sha256": "644b7d7bac8e3e23f3ee31ec337e5684f6601ad8645e5c4fda79d6207d128dd6",
+          "size": 68492
+        },
+        "task-error": {
+          "file": "packs/warbler/task-error.wav",
+          "sha256": "0003003e1450f3f3aa6aa4101afac8b0a6b7a355ecca8762c99ea01f065135c7",
+          "size": 43532
+        },
+        "input-required": {
+          "file": "packs/warbler/input-required.wav",
+          "sha256": "f3b7d9281e92736e1961a1d46e2b7a6edc3b6c3e010ceaf40bac752ffef7976d",
+          "size": 48812
+        },
+        "input-required-question": {
+          "file": "packs/warbler/input-required-question.wav",
+          "sha256": "ed0f7ec8cf0937167c6f3ffeb326b1ba96f19fac9bad429d78178e104ddc8437",
+          "size": 47372
+        },
+        "resource-limit": {
+          "file": "packs/warbler/resource-limit.wav",
+          "sha256": "5601a43319973db72e206358c006ad9d9499adda068eab39821aece2f98d1ced",
+          "size": 48332
+        },
+        "user-spam": {
+          "file": "packs/warbler/user-spam.wav",
+          "sha256": "acbf640ad23c36952bab2c793f6e799c47f409d634c6b82f6649980839bccead",
+          "size": 38252
+        },
+        "idle-reminder": {
+          "file": "packs/warbler/idle-reminder.wav",
+          "sha256": "ac77464d3400b2cd870d1f4c24bd599bf9ff8a967fd08f1f6077dcf9e0a8a9b8",
+          "size": 32972
+        }
+      }
+    },
+    {
+      "id": "waterphone",
+      "name": "水镜",
+      "englishName": "Water Mirror",
+      "description": "柔和非谐波共鸣，像水面缓慢展开。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/waterphone/session-start.wav",
+          "sha256": "0b47f85def36e5d5ff4e1948713dcd95f2d19206449ab211bdcbae55a1dd90fa",
+          "size": 63404
+        },
+        "task-acknowledge": {
+          "file": "packs/waterphone/task-acknowledge.wav",
+          "sha256": "61a4738cf4bd773f011da001b091a7d83ba7bbba6c827eabc25eec30938b4ee8",
+          "size": 19244
+        },
+        "task-complete": {
+          "file": "packs/waterphone/task-complete.wav",
+          "sha256": "fc62af9f54eafcd4f399c352bf0281faaeb957a9c9358bc7864b16b08620895d",
+          "size": 69164
+        },
+        "task-error": {
+          "file": "packs/waterphone/task-error.wav",
+          "sha256": "586837be383c1cf5405a3dc760add91ae028a84976c17f836d8b26548090efe4",
+          "size": 37484
+        },
+        "input-required": {
+          "file": "packs/waterphone/input-required.wav",
+          "sha256": "c36af1c776a479957f39b8fe7be70cd199a6141a0f56a4826d5272cb43af5ee4",
+          "size": 53804
+        },
+        "input-required-question": {
+          "file": "packs/waterphone/input-required-question.wav",
+          "sha256": "d2d0b1373f5e241e49099fd407b3d07029da51fc3122291f1ad04fc32ed375ea",
+          "size": 56684
+        },
+        "resource-limit": {
+          "file": "packs/waterphone/resource-limit.wav",
+          "sha256": "e8ff0f09cd0482dcc6521730328ba324e35c92b8800f70824c4aa58e208e2417",
+          "size": 41324
+        },
+        "user-spam": {
+          "file": "packs/waterphone/user-spam.wav",
+          "sha256": "d905daf5a3b6f92ad80f24a2eecffb1f9c4eafe6f122c6daa0348a5d8b549078",
+          "size": 23084
+        },
+        "idle-reminder": {
+          "file": "packs/waterphone/idle-reminder.wav",
+          "sha256": "82a22685cd755db054d76785adcfeea7cbffa3419858bc7fea599ef3ca346caa",
+          "size": 71084
+        }
+      }
+    },
+    {
+      "id": "wood",
+      "name": "木语",
+      "englishName": "Wood",
+      "description": "干燥温暖的木质拨奏与短敲。",
+      "version": 1,
+      "license": "LicenseRef-Luan-Official",
+      "sounds": {
+        "session-start": {
+          "file": "packs/wood/session-start.wav",
+          "sha256": "edfcb1d57b3ba7f149437946de6c093c7517288df8ffa24e86291f4f255a1bd6",
+          "size": 40364
+        },
+        "task-acknowledge": {
+          "file": "packs/wood/task-acknowledge.wav",
+          "sha256": "f4cb8feea9cc9ea8e6193ec1cf3ec58d58947317f367a9a17752a9a81cb92e24",
+          "size": 12524
+        },
+        "task-complete": {
+          "file": "packs/wood/task-complete.wav",
+          "sha256": "df291f87a28a0205ab4404546ca0da60bf6e59d62123d8ec15485ddf384c73d9",
+          "size": 45164
+        },
+        "task-error": {
+          "file": "packs/wood/task-error.wav",
+          "sha256": "b3bf3725f9c9aa42ceba97b352f0e8fa4fac15e4f126c0ccc000726987c1f371",
+          "size": 28844
+        },
+        "input-required": {
+          "file": "packs/wood/input-required.wav",
+          "sha256": "94535f13b1da971a880652856c96df2cd6657252fdf051b9518923bb18466d22",
+          "size": 32684
+        },
+        "input-required-question": {
+          "file": "packs/wood/input-required-question.wav",
+          "sha256": "f68101ef3099773e0f5048e10a8151775e88a23c67e3239432a2d205e6726564",
+          "size": 37484
+        },
+        "resource-limit": {
+          "file": "packs/wood/resource-limit.wav",
+          "sha256": "89acc0add8b2bf661c5f20ea398ff2b19f86463dc53ddcef44b817655aba3e28",
+          "size": 32684
+        },
+        "user-spam": {
+          "file": "packs/wood/user-spam.wav",
+          "sha256": "06df47c4248597d91eee81e904295c239db42fdd1119d299f02f7ee90fa381d1",
+          "size": 17324
+        },
+        "idle-reminder": {
+          "file": "packs/wood/idle-reminder.wav",
+          "sha256": "897397c54695cb96c346c3ca9d5b7edb7f00f9629e7073f63a6985f18ec877b6",
+          "size": 38444
+        }
+      }
+    }
+  ]
+}

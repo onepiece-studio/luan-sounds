@@ -1,0 +1,167 @@
+# Luan Sound Repository Standard v1
+
+[中文](STANDARD.zh.md)
+
+A Luan sound repository is a set of static files on the web: one manifest, `luan.json`, plus WAV files. Anyone can publish one. Luan Pro users add it by pasting the URL of its `luan.json`, then pick a pack from it. In the Luan app these repositories are called **sound sources**.
+
+This document is for repository authors. It defines the manifest, the audio rules and the hosting rules. `tools/luan_repo.py` (Python 3 standard library only) builds the manifest and enforces every rule below.
+
+## 1. Two version numbers
+
+| Number | Where | Owned by | Meaning |
+|---|---|---|---|
+| `schemaVersion` | top of `luan.json`, integer | Luan | Version of this standard. Adding optional fields does not change it; only incompatible changes raise it. v1 is `1`. |
+| `version` | each pack, integer ≥ 1 | you | Version of the pack's content. Raise it whenever any file or any metadata of the pack changes. |
+
+If a manifest has a higher `schemaVersion` than the installed Luan supports, Luan refuses to add or update it and asks the user to update Luan. A copy that is already downloaded keeps working.
+
+The repository itself has no version number. Changing its name or description needs no confirmation, and added or removed packs are found by comparing the old and new manifest.
+
+## 2. Directory layout
+
+```
+<repo-root>/
+├── luan.json                 # the manifest; the only file Luan reads first
+├── packs/
+│   └── <pack-id>/
+│       ├── pack.json         # written by you: this pack's metadata
+│       └── <event>.wav       # 1–9 event sounds, named after the event
+├── README.md
+└── LICENSE
+```
+
+- You write the top-level fields of `luan.json` by hand. `python3 tools/luan_repo.py build .` generates its `packs` array from `packs/*/pack.json` and the WAV files, including every `sha256` and `size`. Never write hashes by hand.
+- Only `luan.json` and the audio files are part of the standard. `pack.json` and the `packs/` layout are a convention of the tool: Luan never reads `pack.json`; it fetches exactly the `file` paths listed in `luan.json`.
+- `pack.json` holds every pack field except `id` (the folder name) and `sounds` (generated), for example `{ "name": "Night rain", "version": 1, "license": "CC-BY-4.0" }`.
+
+## 3. The manifest: `luan.json`
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "com.example.sounds",
+  "name": "Example sounds",
+  "description": "Soft sounds for coding sessions",
+  "author": { "name": "Example", "email": "hi@example.com", "url": "https://example.com" },
+  "homepage": "https://github.com/example/luan-sounds",
+  "packs": [
+    {
+      "id": "night-rain",
+      "name": "Night rain",
+      "description": "Raindrops on a window sill",
+      "version": 3,
+      "license": "CC-BY-4.0",
+      "author": { "name": "Someone" },
+      "sounds": {
+        "session-start": { "file": "packs/night-rain/session-start.wav", "sha256": "<64 lowercase hex>", "size": 96044 },
+        "task-complete": { "file": "packs/night-rain/task-complete.wav", "sha256": "<64 lowercase hex>", "size": 88120 }
+      }
+    }
+  ]
+}
+```
+
+| Field | Required | Rule |
+|---|---|---|
+| `schemaVersion` | yes | Integer, `1` for this version |
+| `id` | yes | 1–128 characters, `^[a-z0-9]+([.-][a-z0-9]+)*$`; reverse-DNS recommended. `builtin` is reserved. Must never change for the same URL |
+| `name` | yes | 1–64 characters, no control characters |
+| `description` | no | ≤ 280 characters |
+| `author` | no | `{ "name" (required), "email"?, "url"? }`; `url` must be `https://` |
+| `homepage` | no | `https://` URL |
+| `packs` | yes | 1–64 packs with unique `id`s |
+| `packs[].id` | yes | 1–64 characters, `^[a-z0-9]+(-[a-z0-9]+)*$` |
+| `packs[].name` | yes | 1–64 characters, no control characters |
+| `packs[].description` | no | ≤ 280 characters |
+| `packs[].version` | yes | Integer ≥ 1 |
+| `packs[].license` | no | SPDX identifier (e.g. `CC-BY-4.0`) or `LicenseRef-…` |
+| `packs[].author` | no | Same shape as the top-level `author`; defaults to the repository author |
+| `packs[].sounds` | yes | At least one known event |
+| `sounds.<event>.file` | yes | Relative path using only `A–Z a–z 0–9 . _ -` and `/`, ≤ 255 characters; no empty, `.` or `..` segments; ends in `.wav` (lowercase) |
+| `sounds.<event>.sha256` | yes | SHA-256 of the file, 64 lowercase hex characters |
+| `sounds.<event>.size` | yes | File size in bytes, integer |
+
+Lengths count Unicode code points. Integers must be JSON integers (`1`, not `1.0` or `"1"`).
+
+### Events
+
+| Key | When it plays |
+|---|---|
+| `session-start` | A coding session starts |
+| `task-acknowledge` | A task is accepted |
+| `task-complete` | A task finishes |
+| `task-error` | A task fails |
+| `input-required` | The agent needs approval |
+| `input-required-question` | The agent asks a question |
+| `resource-limit` | The context is being compacted |
+| `user-spam` | Several prompts sent in quick succession |
+| `idle-reminder` | Idle reminder |
+
+A pack does not need all nine. Missing events use Luan's built-in default sounds.
+
+### Forward compatibility
+
+- Unknown fields are ignored.
+- Unknown event keys are ignored; they never make the whole repository invalid. New events can be added without changing `schemaVersion`.
+- `schemaVersion` is raised only for incompatible changes: removing a field, or changing the meaning or type of an existing one.
+
+`luan_repo.py check` prints a warning for unknown fields and events so that typos are visible, but they are not errors.
+
+## 4. Audio rules
+
+The same numbers are used by this standard, by `luan_repo.py` and by Luan.
+
+| Rule | Value | `luan_repo.py` | Luan |
+|---|---|---|---|
+| Format | WAV, linear PCM, 16- or 24-bit integer | error | rejects |
+| Sample rate | 44.1 kHz or 48 kHz | error | rejects |
+| Channels | 1 or 2 | error | rejects |
+| Duration | longer than 0, at most 5 seconds | error | rejects |
+| File size | ≤ 2 MiB and exactly equal to `size` | error | rejects |
+| Repository size | ≤ 64 MiB in total, identical files counted once | error | rejects |
+| Manifest size | `luan.json` ≤ 1 MiB | error | rejects |
+| Loudness | Recommended: peak ≤ −1 dBFS, loudness close to Luan's built-in sounds | warning | accepted; turned down at playback |
+
+WAV is the only format in v1 because it can be validated exactly with a standard library, without ffmpeg, both in CI and in the app. The limits leave plenty of room: five seconds of 48 kHz, stereo, 24-bit audio is about 1.4 MiB.
+
+Luan measures the peak and RMS of every sound and, if it is louder than the built-in sound for the same event, plays it quieter. It never makes a sound louder.
+
+## 5. Hosting
+
+- Every file must be served over HTTPS with its exact bytes.
+- All files must be on the same host as `luan.json`, in the same directory or below it. Redirects are followed only within that scope.
+- GitHub raw URLs (`https://raw.githubusercontent.com/<owner>/<repo>/<branch>/luan.json`) and GitHub Pages work. GitHub Releases assets do not: they redirect to another host.
+- Paths are case-sensitive on most hosts. Do not commit symlinks; GitHub raw serves a symlink as a small text file.
+
+## 6. Updates
+
+Luan Pro checks every added repository for updates in the background every six hours, and whenever the user asks. When a pack changes it shows a summary, for example "Night rain v3 → v4 · 2 packs added", and the user decides whether to update. An update applies the whole new manifest at once.
+
+To publish a change to a pack, change its files or metadata, raise `version` in its `pack.json`, run `build` and push. Rules Luan applies when comparing manifests:
+
+- A new pack id means the pack was added; a missing id means it was removed. If the user's selected pack is removed, Luan falls back to its built-in sounds.
+- A pack whose files or metadata changed must have a larger `version`. If the content changed and `version` stayed the same or went down, Luan treats the manifest as invalid and offers no update.
+- The repository `id` must not change.
+
+`luan_repo.py build` refuses to write a manifest in which a changed pack kept its version. `luan_repo.py check . --previous old-luan.json` applies the same comparison against a previously published manifest; the sample CI workflow does this for every push and pull request.
+
+## 7. Badges
+
+Luan ships a short list of URL prefixes with a badge for each. A repository whose URL starts with one of them shows that badge in the app; the official repository, `https://raw.githubusercontent.com/onepiece-studio/luan-sounds/`, shows "Official". The list is curated by Luan and changes only with a new app release.
+
+A badge says who controls the address. It says nothing else. The SHA-256 values in a manifest only prove that the downloaded files are the ones the manifest lists; they do not prove who published it.
+
+## 8. Validate and publish
+
+```sh
+python3 tools/luan_repo.py build .   # regenerate the packs array, then check
+python3 tools/luan_repo.py check .   # check only; exit status 1 on any error
+```
+
+Each problem is printed as `error: <where>: <message> [<rule>]`. Warnings (unknown fields, loud peaks) do not change the exit status.
+
+To check every push on GitHub, copy `tools/luan_repo.py` into your repository and add `.github/workflows/check.yml` from the official repository: <https://github.com/onepiece-studio/luan-sounds>. The JSON Schema `schema/luan-v1.schema.json` covers the manifest structure for editors; the tool covers everything else (hashes, sizes, audio).
+
+## 9. Licensing your sounds
+
+Only publish sounds you have the right to distribute, and say how they may be used: set `license` on each pack and include a `LICENSE` file.

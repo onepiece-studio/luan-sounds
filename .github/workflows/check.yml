@@ -1,0 +1,29 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check luan.json and audio
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -n "$BASE" ] && git cat-file -e "$BASE:luan.json" 2>/dev/null; then
+            git show "$BASE:luan.json" > "$RUNNER_TEMP/previous-luan.json"
+            python3 tools/luan_repo.py check . --previous "$RUNNER_TEMP/previous-luan.json"
+          else
+            python3 tools/luan_repo.py check .
+          fi

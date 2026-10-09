@@ -1,0 +1,68 @@
+This repository contains two kinds of material under two different licenses.
+
+  Part 1  Sound packs (everything in packs/, including every .wav file and its
+          pack.json, and the pack entries they produce in luan.json)
+          License: LicenseRef-Luan-Official, below.
+
+  Part 2  Tools, schema and documentation (tools/, schema/, .github/,
+          STANDARD.md, STANDARD.zh.md, README.md)
+          License: MIT, below.
+
+
+==============================================================================
+Part 1. LicenseRef-Luan-Official
+==============================================================================
+
+Copyright (c) 2026 fuyo. All rights reserved.
+
+The sound files are provided for use within the Luan app
+(https://luan.fuyo.app) only.
+
+You may:
+
+  - Download the sound files through Luan, or from this repository, and play
+    them as notification sounds in Luan on your own devices, including while
+    you work.
+
+You may not:
+
+  - Use the sound files, in whole or in part, modified or not, in any other
+    app, product, website, service, game, video, or other work.
+  - Copy, redistribute, publish, mirror, sell, rent, or sublicense the sound
+    files, modified or not, outside of Luan.
+  - Use the sound files for any commercial purpose other than hearing them in
+    Luan as described above.
+
+Viewing and forking this repository on GitHub as permitted by GitHub's Terms
+of Service does not grant any further rights to the sound files.
+
+For any other use, ask first: luan@fuyo.app.
+
+THE SOUND FILES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT
+SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+FROM THE SOUND FILES OR THEIR USE.
+
+
+==============================================================================
+Part 2. MIT License
+==============================================================================
+
+Copyright (c) 2026 fuyo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
