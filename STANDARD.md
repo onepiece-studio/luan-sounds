@@ -24,12 +24,16 @@ The repository itself has no version number. Changing its name or description ne
 │   └── <pack-id>/
 │       ├── pack.json         # written by you: this pack's metadata
 │       └── <event>.wav       # 1–9 event sounds, named after the event
+├── assets/
+│   └── <sha256>.wav          # written by build: the audio luan.json points to, named by its content
 ├── README.md
 └── LICENSE
 ```
 
 - You write the top-level fields of `luan.json` by hand. `python3 tools/luan_repo.py build .` generates its `packs` array from `packs/*/pack.json` and the WAV files, including every `sha256` and `size`. Never write hashes by hand.
-- Only `luan.json` and the audio files are part of the standard. `pack.json` and the `packs/` layout are a convention of the tool: Luan never reads `pack.json`; it fetches exactly the `file` paths listed in `luan.json`.
+- You edit the WAV files in `packs/<pack-id>/`. `build` copies each one to `assets/<sha256>.wav` and points `file` there, so a path's content never changes (see [§5](#5-hosting)). A pack whose `version` is unchanged keeps the paths it was published with: Luan treats a changed path as changed content. A pack published by an older version of the tool, with paths such as `packs/<pack-id>/<event>.wav`, therefore moves to `assets/` the next time its `version` goes up, not before.
+- `build` never deletes anything in `assets/`. Keep old files there: while a cache still serves an older `luan.json`, Luan downloads the files that one lists.
+- Only `luan.json` and the audio files are part of the standard. `pack.json`, `assets/` and the `packs/` layout are conventions of the tool: Luan never reads `pack.json`; it fetches exactly the `file` paths listed in `luan.json`, whatever they are.
 - `pack.json` holds every pack field except `id` (the folder name) and `sounds` (generated), for example `{ "name": "Night rain", "version": 1, "license": "CC-BY-4.0" }`. Fields such as `localizations` are copied into `luan.json` as written.
 
 ## 3. The manifest: `luan.json`
@@ -156,6 +160,7 @@ Luan measures the peak and RMS of every sound and, if it is louder than the buil
 - All files must be on the same host as `luan.json`, in the same directory or below it. Redirects are followed only within that scope.
 - GitHub raw URLs (`https://raw.githubusercontent.com/<owner>/<repo>/<branch>/luan.json`) and GitHub Pages work. GitHub Releases assets do not: they redirect to another host.
 - jsDelivr's GitHub mirror (`https://cdn.jsdelivr.net/gh/<owner>/<repo>@<ref>/luan.json`) also works. It caches branch addresses such as `@main` for up to about 12 hours, so an update may reach users late; a tag or commit ref (`@v3`, `@<commit>`) is never stale.
+- Caches work per path: right after a push, a host can serve the new `luan.json` with an older copy of an audio file at the same path (jsDelivr for hours, GitHub raw for minutes). Luan then finds a SHA-256 that doesn't match, installs nothing and tries again later. Never change the content behind a published path; give new content a new path. `luan_repo.py build` does this for you with `assets/<sha256>.wav`, and `check` reports a file named after a SHA-256 whose content differs.
 - Paths are case-sensitive on most hosts. Do not commit symlinks; GitHub raw serves a symlink as a small text file.
 
 Addresses users can paste into Luan:
@@ -173,12 +178,13 @@ A ref that contains `/` (for example `feature/x`) cannot be told apart from a fo
 
 ## 6. Updates
 
-Luan Pro checks every added repository for updates in the background every six hours, and whenever the user asks. When a pack changes it shows a summary, for example "Night rain v3 → v4 · 2 packs added", and the user decides whether to update. An update applies the whole new manifest at once.
+Luan Pro checks every added repository for updates in the background every twelve hours, and whenever the user asks. With automatic updates on (the default) it downloads and applies new pack versions right away; with them off it shows a summary, for example "Night rain v3 → v4 · 2 packs added", and the user decides whether to update. An update applies the whole new manifest at once. If an automatic update can't be installed, for example because a file is missing or doesn't match its `sha256`, Luan keeps what it has and tries again after 15 minutes, 1 hour and 4 hours, then every twelve hours.
 
-To publish a change to a pack, change its files or metadata, raise `version` in its `pack.json`, run `build` and push. Rules Luan applies when comparing manifests:
+To publish a change to a pack, change its files or metadata, raise `version` in its `pack.json`, run `build` and push the new files in `assets/` together with `luan.json`. Rules Luan applies when comparing manifests:
 
-- A new pack id means the pack was added; a missing id means it was removed. If the user's selected pack is removed, Luan falls back to its built-in sounds.
-- A pack whose files or metadata changed must have a larger `version`. If the content changed and `version` stayed the same or went down, Luan treats the manifest as invalid and offers no update.
+- A new pack id means the pack was added; a missing id means it was removed. If the user's selected pack is removed, Luan keeps playing the copy it already has.
+- A pack whose files or metadata changed must have a larger `version`. If the content changed and `version` stayed the same, Luan treats the manifest as invalid and offers no update.
+- A manifest in which some packs have a smaller `version` than the copy Luan already has, and none a larger one, is an older copy still held by a cache. Luan ignores it and keeps what it has. Smaller and larger versions mixed in one manifest make it invalid.
 - The repository `id` must not change.
 
 `luan_repo.py build` refuses to write a manifest in which a changed pack kept its version. `luan_repo.py check . --previous old-luan.json` applies the same comparison against a previously published manifest; the sample CI workflow does this for every push and pull request.

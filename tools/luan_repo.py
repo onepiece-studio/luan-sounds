@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build and validate a Luan sound repository (standard v1).
 
-    python3 tools/luan_repo.py build <repo-root>   regenerate the packs array of luan.json
+    python3 tools/luan_repo.py build <repo-root>   regenerate the packs array of luan.json (and assets/)
     python3 tools/luan_repo.py check <repo-root>   validate luan.json and every audio file
 
 Python 3.9+ standard library only. See STANDARD.md for the rules this tool enforces.
@@ -12,6 +12,7 @@ import hashlib
 import json
 import math
 import re
+import shutil
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -19,6 +20,7 @@ from urllib.parse import urlsplit
 SCHEMA_VERSION = 1
 MANIFEST = 'luan.json'
 PACK_FILE = 'pack.json'
+ASSETS = 'assets'
 EVENTS = ('session-start', 'task-acknowledge', 'task-complete', 'task-error', 'input-required',
           'input-required-question', 'resource-limit', 'user-spam', 'idle-reminder')
 
@@ -38,6 +40,8 @@ PACK_ID = re.compile(r'[a-z0-9]+(-[a-z0-9]+)*')
 LICENSE = re.compile(r'LicenseRef-[A-Za-z0-9.-]+|(?!LicenseRef-)[A-Za-z0-9][A-Za-z0-9.+-]*')
 SHA256 = re.compile(r'[0-9a-f]{64}')
 PATH_CHARS = re.compile(r'[A-Za-z0-9._/-]+')
+# A file named after its SHA-256 promises that its content never changes (see STANDARD.md §5).
+CONTENT_ADDRESSED = re.compile(r'(?:[A-Za-z0-9._/-]*/)?([0-9a-f]{64})\.wav')
 # BCP 47 language[-script][-region][-variant...]; extensions and private use are not needed for display text.
 LANGUAGE_TAG = re.compile(r'[A-Za-z]{2,3}(-[A-Za-z]{4})?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*')
 
@@ -204,13 +208,33 @@ def peak_ratio(pcm, bits):
 
 # ---------------------------------------------------------------- build
 
-def generate_packs(root, report):
-    """Scan packs/*/pack.json and their <event>.wav files into a packs array."""
-    packs = []
+def asset_path(digest):
+    return f'{ASSETS}/{digest}.wav'
+
+
+def published_packs(previous):
+    """Pack id -> (version, sounds) as written in a previous luan.json."""
+    if not isinstance(previous, dict) or not isinstance(previous.get('packs'), list):
+        return {}
+    return {p['id']: (p.get('version'), p['sounds']) for p in previous['packs']
+            if isinstance(p, dict) and isinstance(p.get('id'), str) and isinstance(p.get('sounds'), dict)}
+
+
+def generate_packs(root, report, previous=None):
+    """Scan packs/*/pack.json and their <event>.wav files into a packs array.
+
+    Returns (packs, copies). Audio of a new pack, or of a pack whose version went up, is
+    referenced as assets/<sha256>.wav; `copies` maps each such path to its source file.
+    A pack whose version equals the one in `previous` keeps the paths published there:
+    Luan counts a changed path as changed content, so moving an unchanged pack would
+    announce an update that isn't one.
+    """
+    packs, copies = [], {}
     folder = root / 'packs'
     if not folder.is_dir():
         report.error('packs/', 'build', 'missing packs/ directory')
-        return packs
+        return packs, copies
+    published = published_packs(previous)
     for directory in sorted(p for p in folder.iterdir() if p.is_dir()):
         where = f'packs/{directory.name}/{PACK_FILE}'
         if not (directory / PACK_FILE).is_file():
@@ -228,20 +252,38 @@ def generate_packs(root, report):
         pack = {'id': directory.name}
         pack.update((k, v) for k, v in meta.items() if k not in ('id', 'sounds'))
         pack['sounds'] = {}
+        version, kept = published.get(directory.name, (None, {}))
+        if not (is_int(version) and version == meta.get('version') and is_int(meta.get('version'))):
+            kept = {}
         for event in EVENTS:
             path = directory / f'{event}.wav'
             if path.is_file():
-                pack['sounds'][event] = {
-                    'file': path.relative_to(root).as_posix(),
-                    'sha256': sha256_of(path),
-                    'size': path.stat().st_size,
-                }
+                digest = sha256_of(path)
+                old = kept.get(event)
+                same = isinstance(old, dict) and old.get('sha256') == digest and isinstance(old.get('file'), str)
+                file = old['file'] if same else asset_path(digest)
+                if file == asset_path(digest):
+                    copies[file] = path
+                pack['sounds'][event] = {'file': file, 'sha256': digest, 'size': path.stat().st_size}
         for extra in sorted(directory.iterdir()):
             if extra.name != PACK_FILE and extra.suffix == '.wav' and extra.stem not in EVENTS:
                 report.warn(f'packs/{directory.name}/{extra.name}', 'build',
                             'file name is not a known event; not added to luan.json')
         packs.append(pack)
-    return packs
+    return packs, copies
+
+
+def write_assets(root, copies):
+    """Copy audio to its content-addressed path. Existing files are never deleted: a client
+    that still sees an older luan.json downloads the files that one lists."""
+    for relative, source in sorted(copies.items()):
+        target = root / relative
+        if target.is_symlink():
+            target.unlink()
+        elif target.is_file() and sha256_of(target) == sha256_of(source):
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
 
 
 def pack_content(pack):
@@ -287,13 +329,14 @@ def build(root, skip_version_check=False):
     else:
         current = None
         report.warn(MANIFEST, 'build', 'created from a template; edit id, name and author')
-    packs = generate_packs(root, report)
+    packs, copies = generate_packs(root, report, current)
     document = {k: v for k, v in (current or TEMPLATE).items() if k != 'packs'}
     document['packs'] = packs
     if current is not None and not skip_version_check:
         compare_versions(current, document, report)
     if report.errors:
         return report
+    write_assets(root, copies)
     write_json(manifest_path, document)
     result = check(root)
     result.warnings[:0] = report.warnings
@@ -449,6 +492,11 @@ def check_sound(root, sound, where, report, cache, unique):
         report.error(f'{where}.sha256', 'sha256', f'does not match {sound["file"]} (actual {actual[0]})')
     if size is not None and actual[1] != size:
         report.error(f'{where}.size', 'size', f'{size} does not match {sound["file"]} ({actual[1]} bytes)')
+    named = CONTENT_ADDRESSED.fullmatch(sound['file'])
+    if named and named.group(1) != actual[0]:
+        report.error(f'{where}.file', 'content-address',
+                     f'{sound["file"]} is named after a SHA-256 but its content is {actual[0]}; '
+                     'a file named by its hash must never change')
 
 
 def check_pack(root, pack, where, report, cache, unique):
@@ -535,7 +583,7 @@ def check(root, previous=None):
     check_manifest(root, manifest, report)
     if isinstance(manifest, dict) and (root / 'packs').is_dir() and any((root / 'packs').glob(f'*/{PACK_FILE}')):
         scratch = Report()
-        if generate_packs(root, scratch) != manifest.get('packs'):
+        if generate_packs(root, scratch, manifest)[0] != manifest.get('packs'):
             report.error(MANIFEST, 'stale-manifest',
                          'packs array differs from packs/*/pack.json and audio files; run "luan_repo.py build"')
         report.errors.extend(scratch.errors)
