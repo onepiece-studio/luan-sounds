@@ -1,0 +1,16 @@
+{
+  "name": "Gentle dove",
+  "description": "Original synthesized birdsong: a low, soft coo with a gentle attack and light throat trill, suited to quiet work.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "斑鸠·低吟",
+      "description": "原创合成仿鸟鸣：低柔的 coo 声腔、缓起音与轻喉颤，适合安静工作提示。"
+    },
+    "zh-Hant": {
+      "name": "斑鳩·低吟",
+      "description": "原創合成仿鳥鳴：低柔的 coo 聲腔、緩起音與輕喉顫，適合安靜工作提示。"
+    }
+  },
+  "version": 3,
+  "license": "LicenseRef-Luan-Official"
+}

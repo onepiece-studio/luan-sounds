@@ -1,0 +1,16 @@
+{
+  "name": "Plucked",
+  "description": "Fine plucked-string overtones muted by a fingertip.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "弦语",
+      "description": "细密拨弦泛音与指腹止音。"
+    },
+    "zh-Hant": {
+      "name": "弦語",
+      "description": "細密撥弦泛音與指腹止音。"
+    }
+  },
+  "version": 3,
+  "license": "LicenseRef-Luan-Official"
+}

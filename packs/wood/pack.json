@@ -1,0 +1,16 @@
+{
+  "name": "Wood",
+  "description": "Dry, warm wooden plucks and short knocks.",
+  "localizations": {
+    "zh-Hans": {
+      "name": "木语",
+      "description": "干燥温暖的木质拨奏与短敲。"
+    },
+    "zh-Hant": {
+      "name": "木語",
+      "description": "乾燥溫暖的木質撥奏與短敲。"
+    }
+  },
+  "version": 3,
+  "license": "LicenseRef-Luan-Official"
+}
