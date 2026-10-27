@@ -88,7 +88,8 @@
             "input-required-question": { "$ref": "#/$defs/sound" },
             "resource-limit": { "$ref": "#/$defs/sound" },
             "user-spam": { "$ref": "#/$defs/sound" },
-            "idle-reminder": { "$ref": "#/$defs/sound" }
+            "idle-reminder": { "$ref": "#/$defs/sound" },
+            "compaction-complete": { "$ref": "#/$defs/sound" }
           },
           "anyOf": [
             { "required": ["session-start"] },
@@ -99,7 +100,8 @@
             { "required": ["input-required-question"] },
             { "required": ["resource-limit"] },
             { "required": ["user-spam"] },
-            { "required": ["idle-reminder"] }
+            { "required": ["idle-reminder"] },
+            { "required": ["compaction-complete"] }
           ]
         }
       }

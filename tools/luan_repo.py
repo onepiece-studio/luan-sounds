@@ -22,7 +22,7 @@ MANIFEST = 'luan.json'
 PACK_FILE = 'pack.json'
 ASSETS = 'assets'
 EVENTS = ('session-start', 'task-acknowledge', 'task-complete', 'task-error', 'input-required',
-          'input-required-question', 'resource-limit', 'user-spam', 'idle-reminder')
+          'input-required-question', 'resource-limit', 'user-spam', 'idle-reminder', 'compaction-complete')
 
 MIB = 1024 * 1024
 MAX_MANIFEST_BYTES = 1 * MIB

@@ -23,7 +23,7 @@ The repository itself has no version number. Changing its name or description ne
 ├── packs/
 │   └── <pack-id>/
 │       ├── pack.json         # written by you: this pack's metadata
-│       └── <event>.wav       # 1–9 event sounds, named after the event
+│       └── <event>.wav       # 1–10 event sounds, named after the event
 ├── assets/
 │   └── <sha256>.wav          # written by build: the audio luan.json points to, named by its content
 ├── README.md
@@ -124,8 +124,9 @@ Write `name` and `description` in the language most of your users read; English 
 | `resource-limit` | The context is being compacted |
 | `user-spam` | Several prompts sent in quick succession |
 | `idle-reminder` | Idle reminder |
+| `compaction-complete` | The context has been compacted |
 
-A pack does not need all nine. Missing events use Luan's built-in default sounds.
+A pack does not need every event. A missing `compaction-complete` uses the pack's own `resource-limit`, so the pair keeps one style; any other missing event, and a pack with neither of the two, uses Luan's built-in default sound. Older versions of Luan ignore `compaction-complete`.
 
 ### Forward compatibility
 
